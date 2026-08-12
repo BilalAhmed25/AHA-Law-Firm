@@ -1,0 +1,178 @@
+/* Testimonials Section Scoped CSS & Variables */
+
+:root {
+    --t-section-bg: rgba(143, 99, 41, 0.03);
+    --t-main-card-bg: #ffffff;
+    --t-card-bg: #ffffff;
+    --t-primary-color: #0A1628;
+    --t-accent-color: #8f6329;
+    --t-text-color: #555555;
+    --t-quote-color: rgba(143, 99, 41, 0.08);
+    --t-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --t-shadow-lg: 0 18px 45px rgba(143, 99, 41, 0.16);
+    --t-radius-large: 28px;
+    --t-radius-card: 20px;
+    --t-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonials-section {
+    padding: 100px 0;
+    background: var(--t-section-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-main-wrapper {
+    background: var(--t-main-card-bg);
+    border-radius: var(--t-radius-large);
+    padding: 60px 20px 65px 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    position: relative;
+    border: 1px solid rgba(143, 99, 41, 0.1);
+    overflow: hidden;
+}
+
+/* Giant quotation mark background watermark */
+.testimonials-watermark {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    font-size: 160px;
+    line-height: 1;
+    color: var(--t-quote-color);
+    font-family: Georgia, serif;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+}
+
+.testimonials-header {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+.testimonials-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--t-primary-color);
+    margin: 0;
+}
+
+.testimonials-underline {
+    width: 70px;
+    height: 4px;
+    background: #ff7b7b;
+    border-radius: 2px;
+    margin: 14px auto 0 auto;
+}
+
+/* Swiper Coverflow Styling */
+.testimonials-swiper-container {
+    padding: 30px 10px 50px 10px !important;
+    overflow: visible !important;
+}
+
+.testimonials-swiper-container .swiper-slide {
+    transition: var(--t-transition) !important;
+    opacity: 0.35 !important;
+    transform: scale(0.82) !important;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.testimonials-swiper-container .swiper-slide-active {
+    opacity: 1 !important;
+    transform: scale(1.05) translateZ(0) !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    z-index: 10 !important;
+}
+
+.testimonials-swiper-container .swiper-slide-next,
+.testimonials-swiper-container .swiper-slide-prev {
+    opacity: 0.7 !important;
+    transform: scale(0.92) !important;
+    filter: blur(0px) !important;
+    z-index: 5 !important;
+}
+
+.testimonial-card {
+    background: var(--t-card-bg);
+    border-radius: var(--t-radius-card);
+    padding: 36px 28px;
+    border: 1px solid #eee7dd;
+    box-shadow: var(--t-shadow-sm);
+    transition: var(--t-transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    min-height: 270px;
+}
+
+.testimonials-swiper-container .swiper-slide-active .testimonial-card {
+    border-color: var(--t-accent-color);
+    box-shadow: var(--t-shadow-lg);
+    background: #ffffff;
+}
+
+.testimonial-avatar-wrapper {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: var(--t-accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-avatar-fallback {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.testimonial-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--t-primary-color);
+    margin: 0 0 4px 0;
+}
+
+.testimonial-role {
+    font-size: 12px;
+    color: var(--t-accent-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.testimonial-quote {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--t-text-color);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-card-quote-icon {
+    font-size: 28px;
+    color: var(--t-quote-color);
+    line-height: 1;
+    margin-bottom: 8px;
+    font-family: Georgia, serif;
+}

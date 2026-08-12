@@ -1,0 +1,186 @@
+/* Founder's Message Section Scoped CSS - #FAF6F0 Light Theme */
+
+:root {
+    --fm-bg-card: #FAF6F0;
+    --fm-accent-gold: #8f6329;
+    --fm-accent-hover: #a37333;
+    --fm-text-dark: #0A1628;
+    --fm-text-body: #4A5568;
+    --fm-border-gold: rgba(143, 99, 41, 0.18);
+    --fm-radius-container: 28px;
+    --fm-radius-image: 20px;
+    --fm-transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.founder-section {
+    padding: 90px 0;
+    background: #ffffff;
+    position: relative;
+}
+
+.founder-main-card {
+    background: var(--fm-bg-card);
+    border-radius: var(--fm-radius-container);
+    padding: 60px 50px;
+    border: 1px solid var(--fm-border-gold);
+    box-shadow: 0 15px 45px rgba(10, 22, 40, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background watermark quotation mark */
+.founder-watermark {
+    position: absolute;
+    right: 40px;
+    bottom: -30px;
+    font-size: 240px;
+    line-height: 1;
+    color: rgba(143, 99, 41, 0.08);
+    font-family: Georgia, serif;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Image Column Frame */
+.founder-img-wrapper {
+    position: relative;
+    border-radius: var(--fm-radius-image);
+    padding: 6px;
+    background: linear-gradient(135deg, rgba(143, 99, 41, 0.4) 0%, rgba(255, 123, 123, 0.2) 100%);
+    box-shadow: 0 12px 30px rgba(10, 22, 40, 0.08);
+}
+
+.founder-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: calc(var(--fm-radius-image) - 4px);
+    display: block;
+}
+
+.founder-img-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 22, 40, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(143, 99, 41, 0.4);
+    padding: 10px 22px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Right Content Area */
+.founder-badge-tag {
+    display: inline-block;
+    color: var(--fm-accent-gold);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.founder-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--fm-text-dark);
+    line-height: 1.35;
+    margin-bottom: 24px;
+}
+
+.founder-quote-symbol {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: var(--fm-accent-gold);
+    line-height: 1;
+    margin-bottom: -8px;
+}
+
+.founder-quote-text {
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--fm-text-body);
+    margin-bottom: 30px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.founder-profile-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid rgba(143, 99, 41, 0.15);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.founder-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--fm-text-dark);
+    margin: 0 0 4px 0;
+}
+
+.founder-role {
+    font-size: 13px;
+    color: var(--fm-accent-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.founder-seal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(143, 99, 41, 0.08);
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(143, 99, 41, 0.15);
+}
+
+.founder-seal-icon {
+    color: var(--fm-accent-gold);
+    font-size: 20px;
+}
+
+.founder-seal-text {
+    color: var(--fm-text-dark);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .founder-main-card {
+        padding: 40px 24px;
+    }
+
+    .founder-title {
+        font-size: 26px;
+    }
+
+    .founder-img {
+        height: 380px;
+    }
+
+    .founder-quote-text {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
