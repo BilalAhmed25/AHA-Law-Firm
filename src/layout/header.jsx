@@ -84,12 +84,8 @@ function Header() {
             <div className="main-bar">
                 <div className="container">
                     <div className="bottom-bar">
-                        <div className="two-bar">
-                            <div className="d-flex align-items-center justify-content-between">
-                                <div className="logo">
-                                    <Link to="/"> <img alt="AHA Law Firm" src={IMAGES.logo} style={{ maxHeight: '70px', width: 'auto', transform: 'translateY(-8px)', transition: 'transform 0.3s ease' }} /> </Link>
-                                </div>
-                            </div>
+                        <div className="logo">
+                            <Link to="/"> <img alt="AHA Law Firm" src={IMAGES.logo} style={{ maxHeight: '70px', width: 'auto', transform: 'translateY(-8px)', transition: 'transform 0.3s ease' }} /> </Link>
                         </div>
                         <nav className="navbar" style={{ marginLeft: 'auto', marginRight: '25px' }}>
                             <ul className="navbar-links">
