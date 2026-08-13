@@ -121,8 +121,8 @@ function Footer() {
                 <div className="copyright">
                     <p>Copyright © {year} <span> <Link to={"https://www.ahalawfirmdxb.com"} target="_blank">AHA Law Firm.</Link> All Rights Reserved.</span></p>
                     <ul>
-                        <li><Link to={"#"}>Terms & Conditions</Link></li>
-                        <li><Link to={"#"}>Privacy Policy</Link></li>
+                        <li><Link to={"/terms-conditions"}>Terms & Conditions</Link></li>
+                        <li><Link to={"/privacy-policy"}>Privacy Policy</Link></li>
                     </ul>
                 </div>
             </div>
