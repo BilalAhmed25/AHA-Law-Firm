@@ -26,18 +26,8 @@ export const menudata = [
             { title: "Wills, Probate & Legacy Planning", link: "/services-details" },
         ],
     },
-    { title: "Our Team", link: "/team", },
-    {
-        title: "Insights",
-        link: "/our-blog",
-        classChange: "navbar-dropdown menu-item-children",
-        classChange2: "menu-item-has-children",
-        subMenu: [
-            { title: "Legal Blog", link: "/our-blog" },
-            { title: "Case Studies", link: "/our-blog" },
-        ],
-    },
-    { title: "Contact", link: "/contact", },
+    { title: "Insights", link: "/our-blog" },
+    { title: "Contact", link: "/contact" },
 ];
 export const footerdata = [
     {
@@ -45,7 +35,6 @@ export const footerdata = [
         links: [
             { title2: "About Us", url: "/about" },
             { title2: "Practice Areas", url: "/services" },
-            { title2: "Our Team", url: "/about" },
             { title2: "Insights", url: "/our-blog" },
             { title2: "Contact Us", url: "/contact" },
         ],

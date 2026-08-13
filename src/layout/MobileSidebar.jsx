@@ -9,7 +9,6 @@ const navIcons = {
     "Home": "fa-solid fa-house-chimney",
     "About": "fa-solid fa-building-columns",
     "Practice Areas": "fa-solid fa-gavel",
-    "Our Team": "fa-solid fa-user-tie",
     "Insights": "fa-solid fa-newspaper",
     "Contact": "fa-solid fa-envelope-open-text"
 };
