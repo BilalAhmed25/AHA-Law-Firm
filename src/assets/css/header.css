@@ -297,6 +297,23 @@ header .header-search i {
         padding-right: 20px;
         padding-top: 0;
     }
+
+    /* Non-sticky transparent header styling on dark hero backgrounds (e.g. About page) */
+    header.header-on-dark .navbar-links>li>a:not(.nav-active) {
+        color: #ffffff !important;
+    }
+
+    header.header-on-dark .navbar-links>li>a:not(.nav-active) i {
+        color: #ffffff !important;
+    }
+
+    header.header-on-dark .navbar-links>li>a:not(.nav-active):hover {
+        color: var(--theme-colour) !important;
+    }
+
+    header.header-on-dark .navbar-links>li>a:not(.nav-active):hover i {
+        color: var(--theme-colour) !important;
+    }
 }
 
 @media (max-width: 575px) {

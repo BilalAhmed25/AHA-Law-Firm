@@ -31,11 +31,12 @@ function Header() {
         if (link === '/' && location.pathname === '/') return true;
         if (link !== '/' && location.pathname === link) return true;
         return false;
-    };
+    }; const isAboutPage = location.pathname === '/about';
+    const isHeaderOnDark = isAboutPage && !isSticky;
 
     return (
         <>
-            <header className={`sticky-header main-bar-wraper ${isSticky ? 'is-fixed' : ''}`}>
+            <header className={`sticky-header main-bar-wraper ${isSticky ? 'is-fixed' : ''} ${isHeaderOnDark ? 'header-on-dark' : ''}`}>
                 <div className="main-bar">
                     <div className="container">
                         <div className="bottom-bar">
@@ -102,7 +103,7 @@ function Header() {
                                 <div style={{
                                     height: '24px',
                                     width: '1px',
-                                    background: 'rgba(10, 22, 40, 0.2)',
+                                    background: isHeaderOnDark ? 'rgba(255, 255, 255, 0.3)' : 'rgba(10, 22, 40, 0.2)',
                                     marginRight: '22px',
                                     marginLeft: '5px'
                                 }} />
