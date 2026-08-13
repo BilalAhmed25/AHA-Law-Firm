@@ -31,7 +31,7 @@ function Footer() {
                 </div>
                 <div className="footer-bottom" style={{ paddingTop: '70px', paddingBottom: '30px' }}>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
                             <div className="footre-logo">
                                 <Link to={"/"}><img src={IMAGES.logo} alt="AHA Law Firm" style={{ maxHeight: '60px', width: 'auto' }} /></Link>
                                 <p style={{ color: '#b0b0b0', fontSize: '15px', lineHeight: '26px', marginTop: '15px' }}>AHA Law Firm is a distinguished full-service legal practice headquartered in Dubai and Ajman, UAE. Committed to legal excellence, strategic insight, and unwavering dedication to client interests.</p>
@@ -41,7 +41,7 @@ function Footer() {
                             </div>
                         </div>
                         {footerdata.map((item, index) => (
-                            <div className="col-lg-4 col-6" key={index}>
+                            <div className="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" key={index}>
                                 <div className="footer-link">
                                     <h5>{item.title}</h5>
                                     <ul className="footer-link-list">
@@ -85,12 +85,8 @@ function Footer() {
                                 },
                             ].map((item, idx) => (
                                 <div
-                                    className="col-lg-4 col-md-12"
+                                    className="col-lg-4 col-md-12 footer-contact-item"
                                     key={idx}
-                                    style={{
-                                        borderRight: idx < 2 ? '1px solid rgba(255, 255, 255, 0.12)' : 'none',
-                                        padding: '10px 20px',
-                                    }}
                                 >
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
                                         <div style={{

@@ -8,7 +8,7 @@ function AboutThree() {
                 <div className="row align-items-center">
                     {/* Left Column Image */}
                     <div className="col-lg-6">
-                        <div style={{ position: 'relative', marginBottom: '0px' }}>
+                        <div style={{ position: 'relative', marginBottom: '35px' }}>
                             <img
                                 src={IMAGES.abouttwoimg || IMAGES.about1}
                                 alt="AHA Law Firm Legal Excellence"
@@ -24,17 +24,17 @@ function AboutThree() {
 
                     {/* Right Column Text */}
                     <div className="col-lg-6">
-                        <div style={{ paddingLeft: '35px', marginBottom: '0px' }}>
+                        <div className="about-text-wrapper" style={{ marginBottom: '30px' }}>
                             <span style={{ color: 'var(--theme-colour)', fontWeight: '600', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px' }}>
                                 Unmatched Legal Commitment
                             </span>
                             <h2 style={{ marginTop: '10px', marginBottom: '22px', fontWeight: '700', fontSize: '36px', color: '#0A1628', lineHeight: '1.3' }}>
                                 Proactive Counsel & Result-Oriented Advocacy
                             </h2>
-                            <p style={{ color: '#555555', fontSize: '16px', lineHeight: '28px', marginBottom: '16px' }}>
+                            <p style={{ color: '#555555', fontSize: '16px', lineHeight: '28px', marginBottom: '16px', marginTop: '20px' }}>
                                 Navigating complex legal landscapes requires more than statutory knowledge; it demands foresight, strategic positioning, and ruthless attention to detail. At AHA Law Firm, we align our legal strategies with your commercial objectives to achieve decisive outcomes.
                             </p>
-                            <p style={{ color: '#555555', fontSize: '16px', lineHeight: '28px', marginBottom: '0' }}>
+                            <p style={{ color: '#555555', fontSize: '16px', lineHeight: '28px', marginBottom: '0', marginTop: '16px' }}>
                                 From complex multi-jurisdictional disputes and asset recovery to corporate governance and private wealth preservation, our legal team stands by your side with transparent advice, rapid response times, and relentless dedication to protecting your rights.
                             </p>
 

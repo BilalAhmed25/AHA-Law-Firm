@@ -272,32 +272,30 @@ function Header() {
                                                 <i className={iconClass} style={{ color: 'var(--theme-colour)', width: '20px' }} />
                                                 <span>{item.title}</span>
                                             </span>
-                                            <i className={`fa-solid ${mobilePracticeOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`} style={{ fontSize: '12px', color: '#707070' }} />
+                                            <i className={`fa-solid ${mobilePracticeOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`} style={{ fontSize: '12px', color: '#707070', transition: 'transform 0.3s ease' }} />
                                         </div>
 
-                                        {/* Practice Areas Collapsible Accordion Dropdown */}
-                                        {mobilePracticeOpen && (
-                                            <div style={{ paddingLeft: '14px', marginTop: '4px', marginBottom: '10px', borderLeft: '2px solid rgba(143, 99, 41, 0.3)' }}>
-                                                {megaPracticeCategories.map((cat, catIdx) => (
-                                                    <div key={catIdx} style={{ marginTop: '10px' }}>
-                                                        <span style={{ fontSize: '10.5px', fontWeight: '700', color: 'var(--theme-colour)', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '6px' }}>
-                                                            {cat.category}
-                                                        </span>
-                                                        {cat.items.map((sub, subIdx) => (
-                                                            <Link
-                                                                key={subIdx}
-                                                                to={sub.link}
-                                                                onClick={() => setShow(false)}
-                                                                style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 0', color: '#4A5568', fontSize: '13px', textDecoration: 'none' }}
-                                                            >
-                                                                <i className={sub.icon} style={{ fontSize: '12px', color: 'var(--theme-colour)', width: '16px' }} />
-                                                                <span>{sub.title}</span>
-                                                            </Link>
-                                                        ))}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        )}
+                                        {/* Smooth Animated Accordion Dropdown */}
+                                        <div className={`mobile-practice-accordion ${mobilePracticeOpen ? 'open' : ''}`}>
+                                            {megaPracticeCategories.map((cat, catIdx) => (
+                                                <div key={catIdx} style={{ marginTop: '10px' }}>
+                                                    <span style={{ fontSize: '10.5px', fontWeight: '700', color: 'var(--theme-colour)', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '6px' }}>
+                                                        {cat.category}
+                                                    </span>
+                                                    {cat.items.map((sub, subIdx) => (
+                                                        <Link
+                                                            key={subIdx}
+                                                            to={sub.link}
+                                                            onClick={() => setShow(false)}
+                                                            style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 0', color: '#4A5568', fontSize: '13px', textDecoration: 'none' }}
+                                                        >
+                                                            <i className={sub.icon} style={{ fontSize: '12px', color: 'var(--theme-colour)', width: '16px' }} />
+                                                            <span>{sub.title}</span>
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            ))}
+                                        </div>
                                     </li>
                                 );
                             }

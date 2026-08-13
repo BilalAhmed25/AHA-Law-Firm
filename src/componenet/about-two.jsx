@@ -5,17 +5,17 @@ function AboutTwo() {
     return (
         <section className="gap" style={{ paddingTop: '50px' }}>
             <div className="container">
-                <div className="row align-items-center">
+                <div className="row align-items-center flex-column-reverse flex-lg-row">
                     {/* Left Column Text */}
                     <div className="col-lg-6">
-                        <div style={{ paddingRight: '35px', marginBottom: '30px' }}>
+                        <div className="about-text-wrapper" style={{ marginBottom: '30px' }}>
                             <span style={{ color: 'var(--theme-colour)', fontWeight: '600', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px' }}>
                                 Comprehensive Legal Mastery
                             </span>
                             <h2 style={{ marginTop: '10px', marginBottom: '22px', fontWeight: '700', fontSize: '36px', color: '#0A1628', lineHeight: '1.3' }}>
                                 Strategic Representation Tailored to Your Success
                             </h2>
-                            <p style={{ color: '#555555', fontSize: '16px', lineHeight: '28px', marginBottom: '16px' }}>
+                            <p style={{ color: '#555555', fontSize: '16px', lineHeight: '28px', marginBottom: '16px', marginTop: '18px' }}>
                                 At AHA Law Firm, we combine rigorous UAE statutory legal analysis with agile dispute resolution strategies. Whether representing multinational corporations, financial institutions, or private individuals, our legal advocates deliver unmatched clarity, discretion, and high-stakes advocacy across every level of the legal system.
                             </p>
                             <p style={{ color: '#555555', fontSize: '16px', lineHeight: '28px', marginBottom: '0' }}>
@@ -35,9 +35,9 @@ function AboutTwo() {
                         </div>
                     </div>
 
-                    {/* Right Column Image (Without 15+ Years Badge) */}
+                    {/* Right Column Image (Positioned FIRST on mobile view) */}
                     <div className="col-lg-6">
-                        <div style={{ position: 'relative' }}>
+                        <div style={{ position: 'relative', marginBottom: '35px' }}>
                             <img
                                 src={IMAGES.about2}
                                 alt="AHA Law Firm Legal Team"
