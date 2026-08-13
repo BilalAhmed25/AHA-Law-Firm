@@ -1,4 +1,5 @@
 import React from "react";
+import { openQuoteModal } from "./quote-modal";
 import "../assets/css/services-grid.css";
 
 const practiceGroups = [
@@ -255,15 +256,15 @@ function ServicesGrid() {
                                         </div>
 
                                         <div className="services-card-footer">
-                                            <a
-                                                href={`https://wa.me/971566856365?text=Hello%2C%20I%20would%20like%20to%20consult%20regarding%20${encodeURIComponent(practice.title)}.`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
+                                            <button
+                                                type="button"
                                                 className="services-card-action"
+                                                style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+                                                onClick={() => openQuoteModal(practice.title)}
                                             >
                                                 <span>Consult Legal Advocate</span>
                                                 <i className="fa-solid fa-arrow-right" />
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

@@ -6,6 +6,8 @@ import MegaDropdown from "./MegaDropdown";
 import MobileSidebar from "./MobileSidebar";
 import "../assets/css/header.css";
 
+import { openQuoteModal } from "../componenet/quote-modal";
+
 function Header() {
     const [show, setShow] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
@@ -110,9 +112,11 @@ function Header() {
                                     marginLeft: '5px'
                                 }} />
                                 <Link
-                                    to={"https://wa.me/971566856365?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20free%20consultation."}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    to={"#"}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        openQuoteModal();
+                                    }}
                                     style={{
                                         color: 'var(--theme-colour)',
                                         fontWeight: '700',

@@ -1,6 +1,7 @@
 import Root from './route/route'
+import QuoteModal from './componenet/quote-modal'
 import "./assets/css/fontawesome.min.css"
-import './assets/css/bootstrap.min.css';  
+import './assets/css/bootstrap.min.css';
 import "./assets/css/style.css"
 import "./assets/css/responsive.css"
 import 'swiper/css';
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <Root />
+      <QuoteModal />
     </>
   )
 }

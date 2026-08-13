@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { openQuoteModal } from "../componenet/quote-modal";
 import "../assets/css/mega-dropdown.css";
 
 export const megaPracticeCategories = [
@@ -53,13 +54,17 @@ function MegaDropdown() {
                                         <span className="mega-item-title">{sub.title}</span>
                                     </div>
                                     {/* Back Face (Flips on hover - Dark Navy & Top-Right Icon) */}
-                                    <Link to={sub.link} className="mega-flip-card-back">
+                                    <div
+                                        className="mega-flip-card-back"
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => openQuoteModal(sub.title)}
+                                    >
                                         <div className="mega-flip-back-content">
                                             <h6 className="mega-flip-title">{sub.title}</h6>
                                             <p className="mega-flip-desc">{sub.desc}</p>
                                         </div>
                                         <i className={`${sub.icon} mega-flip-watermark-icon`} />
-                                    </Link>
+                                    </div>
                                 </div>
                             </div>
                         ))}

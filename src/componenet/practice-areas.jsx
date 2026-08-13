@@ -1,4 +1,5 @@
 import React from "react";
+import { openQuoteModal } from "./quote-modal";
 
 const practiceData = [
     { icon: "fa-solid fa-gavel", title: "Litigation & Disputes", desc: "Representation in courts & tribunals" },
@@ -49,6 +50,7 @@ function PracticeAreas() {
                     {practiceData.map((item, idx) => (
                         <div className="col-lg-3 col-md-6" key={idx} style={{ marginBottom: '24px' }}>
                             <div
+                                onClick={() => openQuoteModal(item.title)}
                                 style={{
                                     background: '#ffffff',
                                     borderRadius: '18px',
