@@ -265,6 +265,7 @@ header .header-search i {
 
     header .logo {
         margin-right: auto !important;
+        margin-bottom: -10px;
     }
 
     header .logo img {

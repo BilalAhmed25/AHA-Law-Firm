@@ -32,7 +32,7 @@ function Header() {
         if (link !== '/' && location.pathname === link) return true;
         return false;
     };
-    const isDarkHeroPage = location.pathname === '/about' || location.pathname === '/contact';
+    const isDarkHeroPage = location.pathname !== '/';
     const isHeaderOnDark = isDarkHeroPage && !isSticky;
 
     return (
@@ -127,9 +127,19 @@ function Header() {
                                     <span>Get a quote</span>
                                 </Link>
                             </div>
-                            <Link to={"#"} id="mobile-menu" className="menu-start" onClick={() => setShow(!show)}>
-                                <i className="fa-solid fa-bars" />
-                            </Link>
+                            <button
+                                type="button"
+                                id="mobile-menu"
+                                className={`mobile-menu-toggle ${show ? "open" : ""} ${isHeaderOnDark ? "on-dark" : ""}`}
+                                onClick={() => setShow(!show)}
+                                aria-label="Toggle Navigation"
+                            >
+                                <div className="menu-toggle-icon">
+                                    <span className="bar bar-1" />
+                                    <span className="bar bar-2" />
+                                    <span className="bar bar-3" />
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
