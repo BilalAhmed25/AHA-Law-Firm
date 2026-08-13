@@ -31,7 +31,7 @@ header .mobile-nav {
     max-width: 80vw !important;
     height: 100%;
     background-color: #ffffff;
-    padding: 10px 40px !important;
+    padding: 6px 15px !important;
     z-index: 9999;
     transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: translateX(-101%);

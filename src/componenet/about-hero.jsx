@@ -131,10 +131,7 @@ function AboutHero() {
                             </div>
 
                             {/* Floating Glassmorphic Metric Box */}
-                            <div style={{
-                                position: 'absolute',
-                                bottom: '-25px',
-                                left: '-20px',
+                            <div className="about-hero-metric-box" style={{
                                 background: 'rgba(10, 22, 40, 0.95)',
                                 backdropFilter: 'blur(16px)',
                                 border: '1px solid rgba(197, 160, 89, 0.5)',

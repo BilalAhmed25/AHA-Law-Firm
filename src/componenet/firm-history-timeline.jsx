@@ -61,7 +61,7 @@ function FirmHistoryTimeline() {
 
                 <div className="row justify-content-center">
                     <div className="col-lg-10">
-                        <div style={{ position: 'relative', paddingLeft: '20px', paddingRight: '20px' }}>
+                        <div className="timeline-container-wrapper" style={{ position: 'relative', paddingLeft: '20px', paddingRight: '20px' }}>
                             {/* Vertical Line for Desktop */}
                             <div style={{
                                 position: 'absolute',
