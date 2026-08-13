@@ -31,8 +31,9 @@ function Header() {
         if (link === '/' && location.pathname === '/') return true;
         if (link !== '/' && location.pathname === link) return true;
         return false;
-    }; const isAboutPage = location.pathname === '/about';
-    const isHeaderOnDark = isAboutPage && !isSticky;
+    };
+    const isDarkHeroPage = location.pathname === '/about' || location.pathname === '/contact';
+    const isHeaderOnDark = isDarkHeroPage && !isSticky;
 
     return (
         <>

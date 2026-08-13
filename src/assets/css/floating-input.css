@@ -1,0 +1,112 @@
+/* Floating Input Dedicated Component Stylesheet */
+
+.floating-input-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.floating-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.floating-input-field {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0A1628;
+    padding: 24px 16px 8px 46px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.floating-input-field.no-icon {
+    padding-left: 16px;
+}
+
+.floating-input-field.textarea {
+    min-height: 130px;
+    padding-top: 26px;
+    resize: vertical;
+}
+
+.floating-input-field::placeholder {
+    color: transparent;
+}
+
+.floating-input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9CA3AF;
+    font-size: 16px;
+    pointer-events: none;
+    transition: color 0.3s ease;
+    z-index: 2;
+}
+
+.floating-input-field.textarea~.floating-input-icon {
+    top: 20px;
+    transform: none;
+}
+
+.floating-input-label {
+    position: absolute;
+    left: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6B7280;
+    font-size: 14.5px;
+    font-weight: 400;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 2;
+    margin: 0;
+    line-height: 1;
+}
+
+.floating-input-field.no-icon~.floating-input-label {
+    left: 16px;
+}
+
+.floating-input-field.textarea~.floating-input-label {
+    top: 20px;
+    transform: none;
+}
+
+/* Floating label active state (focused, has value, or placeholder not shown) */
+.floating-input-field:focus~.floating-input-label,
+.floating-input-field:not(:placeholder-shown)~.floating-input-label,
+.floating-input-group.is-active .floating-input-label {
+    top: 8px !important;
+    transform: translateY(0) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: var(--theme-colour) !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+}
+
+.floating-input-field:focus~.floating-input-icon {
+    color: var(--theme-colour);
+}
+
+.floating-input-field:focus {
+    border-color: var(--theme-colour);
+    box-shadow: 0 0 0 4px rgba(143, 99, 41, 0.12);
+    background-color: #FFFFFF;
+}
+
+.floating-input-error {
+    font-size: 12px;
+    color: #DC2626;
+    margin-top: 5px;
+    padding-left: 4px;
+    display: block;
+}

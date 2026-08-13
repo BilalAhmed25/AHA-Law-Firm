@@ -1,0 +1,125 @@
+/* Contact Form Dedicated Component Stylesheet */
+
+.contact-form-section {
+    padding: 80px 0;
+    background: #FAF8F5;
+}
+
+.contact-form-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 45px;
+    box-shadow: 0 20px 50px rgba(10, 22, 40, 0.06);
+    border: 1px solid #E2E8F0;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form-card:hover {
+    box-shadow: 0 25px 60px rgba(10, 22, 40, 0.1);
+}
+
+.contact-form-header {
+    margin-bottom: 32px;
+}
+
+.contact-form-tag {
+    color: var(--theme-colour);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-form-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0A1628;
+    margin-bottom: 10px;
+    line-height: 1.25;
+}
+
+.contact-form-subtitle {
+    font-size: 15.5px;
+    color: #64748B;
+    margin: 0;
+    line-height: 26px;
+}
+
+.contact-form-submit-btn {
+    width: 100%;
+    padding: 18px 30px;
+    background: var(--theme-colour);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    letter-spacing: 0.3px;
+}
+
+.contact-form-submit-btn:hover {
+    background: #0A1628;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(10, 22, 40, 0.22);
+}
+
+.contact-form-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.contact-form-alert {
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 14.5px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: fadeInAlert 0.4s ease;
+}
+
+.contact-form-alert.success {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    color: #065F46;
+}
+
+.contact-form-alert.error {
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+    color: #991B1B;
+}
+
+@keyframes fadeInAlert {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-form-card {
+        padding: 24px 18px !important;
+        border-radius: 16px;
+    }
+
+    .contact-form-title {
+        font-size: 24px;
+    }
+}

@@ -166,3 +166,31 @@
     border-top: 1px dashed rgba(143, 99, 41, 0.15);
     margin-top: 14px;
 }
+
+/* Reduced Padding for Mobile View */
+@media (max-width: 767px) {
+    .faq-section {
+        padding: 45px 0;
+    }
+
+    .faq-main-wrapper {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+
+    .faq-left-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .faq-cta-card {
+        padding: 20px 16px;
+        border-radius: 14px;
+        margin-bottom: 24px;
+    }
+
+    .faq-item {
+        padding: 16px;
+        border-radius: 12px;
+    }
+}

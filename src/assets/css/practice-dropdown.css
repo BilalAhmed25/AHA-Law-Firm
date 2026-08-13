@@ -1,0 +1,103 @@
+/* Practice Dropdown Dedicated Component Stylesheet */
+
+.practice-dropdown-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.practice-dropdown-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.practice-dropdown-select {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0A1628;
+    padding: 24px 38px 8px 46px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.practice-dropdown-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9CA3AF;
+    font-size: 16px;
+    pointer-events: none;
+    transition: color 0.3s ease;
+    z-index: 2;
+}
+
+.practice-dropdown-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6B7280;
+    font-size: 12px;
+    pointer-events: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 2;
+}
+
+.practice-dropdown-label {
+    position: absolute;
+    left: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6B7280;
+    font-size: 14.5px;
+    font-weight: 400;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 2;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Floating Label Active State */
+.practice-dropdown-select:focus~.practice-dropdown-label,
+.practice-dropdown-group.has-value .practice-dropdown-label {
+    top: 8px !important;
+    transform: translateY(0) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: var(--theme-colour) !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+}
+
+.practice-dropdown-select:focus~.practice-dropdown-icon {
+    color: var(--theme-colour);
+}
+
+.practice-dropdown-select:focus~.practice-dropdown-arrow {
+    color: var(--theme-colour);
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.practice-dropdown-select:focus {
+    border-color: var(--theme-colour);
+    box-shadow: 0 0 0 4px rgba(143, 99, 41, 0.12);
+    background-color: #FFFFFF;
+}
+
+.practice-dropdown-select option {
+    background-color: #FFFFFF;
+    color: #0A1628;
+    padding: 10px;
+    font-size: 14.5px;
+}
