@@ -1,54 +1,24 @@
 import logo from '../assets/img/aha-law-firm-logo.png';
-import logo2 from '../assets/img/aha-law-firm-logo.png';
-import buttonfooter from '../assets/img/button-footer.png';
-import linefooter from '../assets/img/footer-line.png';
 import instagram1 from '../assets/img/instagram-1.jpg';
 import instagram2 from '../assets/img/instagram-2.jpg';
 import instagram3 from '../assets/img/instagram-3.jpg';
 import instagram4 from '../assets/img/instagram-4.jpg';
 import instagram5 from '../assets/img/instagram-5.jpg';
 import instagram6 from '../assets/img/instagram-6.jpg';
-import footerbg from '../assets/img/footer-bg.png';
 import blogone4 from '../assets/img/blog-one-4.jpg';
 import blogone5 from '../assets/img/blog-one-5.jpg';
 import blogone6 from '../assets/img/blog-one-6.jpg';
 import bannerbg from '../assets/img/bannr-bg-img.png';
-import shapethree1 from '../assets/img/shap-three-1.png';
-import shapethree2 from '../assets/img/shap-three-2.png';
 import bannrimag from '../assets/img/hero-home.jpg';
-import bannrshap from '../assets/img/bannr-shap.png';
-import shape1 from '../assets/img/shaps-1.png';
-import shape2 from '../assets/img/shaps-2.png';
-import shape3 from '../assets/img/shaps-3.png';
-import shape4 from '../assets/img/shaps-4.png';
-import shape5 from '../assets/img/shaps-5.png';
-import shape6 from '../assets/img/shaps-6.png';
-import shape7 from '../assets/img/shaps-7.png';
-import shape8 from '../assets/img/shaps-8.png';
-import shape9 from '../assets/img/shaps-9.png';
-import shape10 from '../assets/img/shaps-10.png';
-import team1 from '../assets/img/team-1.png';
-import team2 from '../assets/img/team-2.png';
-import team3 from '../assets/img/team-3.png';
-import heroimage from '../assets/img/hero-img.png';
-import threeshapline from '../assets/img/three-shaps-line.png';
-import bghero from '../assets/img/bg-hero.png';
-import twoshap from '../assets/img/two-shap.png';
-import circleimage2 from '../assets/img/circle-image-2.png';
-import heroimg2 from '../assets/img/hero-img-2.png';
 import about1 from '../assets/img/about-1.jpg';
 import about2 from '../assets/img/about-2.jpg';
 import sign from '../assets/img/signature.png';
 import health1 from '../assets/img/health-img-1.png';
 import health2 from '../assets/img/health-img-2.png';
 import health3 from '../assets/img/health-img-3.png';
-import chooseus from '../assets/img/choose-us.jpg';
-import chooseuslogo from '../assets/img/choose-us-logo.png';
-import circleimage from '../assets/img/circle-image.png';
 import graph from '../assets/img/graph.png';
 import pricingshap from '../assets/img/pricing-plan-shap.png';
 import pricingshap1 from '../assets/img/pricing-plan-shap-1.png';
-import dotimage from '../assets/img/dots-img.png';
 import brandlogo1 from '../assets/img/brand-logo-1.png';
 import brandlogo2 from '../assets/img/brand-logo-2.png';
 import brandlogo3 from '../assets/img/brand-logo-3.png';
@@ -73,11 +43,9 @@ import project12 from '../assets/img/portfolio-12.jpg';
 import review from '../assets/img/review-img-1.jpg';
 import reviewimg2 from '../assets/img/review-img-2.jpg';
 import quotes from '../assets/img/quotes.png';
-import abouttwo from '../assets/img/about-two-img.jpg';
 import portfolio1 from '../assets/img/portfolio-img-1.jpg';
 import portfolio2 from '../assets/img/portfolio-img-2.jpg';
 import portfolio3 from '../assets/img/portfolio-img-3.jpg';
-import bgline2 from '../assets/img/bg-line-2.png';
 import appiontment from '../assets/img/appiontment.png';
 import teamimg1 from '../assets/img/team-img-1.jpg';
 import teamimg2 from '../assets/img/team-img-2.jpg';
@@ -89,89 +57,35 @@ import blogtwo3 from '../assets/img/blog-two-3.jpg';
 import review1 from '../assets/img/review-1.jpg';
 import review2 from '../assets/img/review-2.jpg';
 import review3 from '../assets/img/review-3.jpg';
-import quote2 from '../assets/img/quote-2.png'
-import imageslider1 from '../assets/img/image-slider-1.jpg'
-import imageslider2 from '../assets/img/image-slider-2.jpg'
 import plus from '../assets/img/plus.png'
-import aboutthree from '../assets/img/about-three.png'
 import dentalproject1 from '../assets/img/dental-project-1.jpg'
 import dentalproject2 from '../assets/img/dental-project-2.jpg'
 import dentalproject3 from '../assets/img/dental-project-3.jpg'
-import workingprocess1 from '../assets/img/working-process-1.png'
-import workingprocess2 from '../assets/img/working-process-2.png'
-import workingprocessline from '../assets/img/working-process-line.png'
-import projectdetail1 from '../assets/img/portfolio-details-1.jpg'
-import projectdetail2 from '../assets/img/portfolio-details-2.jpg'
-import projectdetail3 from '../assets/img/portfolio-details-3.jpg'
-import projectdetail4 from '../assets/img/portfolio-details-4.jpg'
-import servicedetails from '../assets/img/services-details.jpg'
-import blogdetails1 from '../assets/img/blog-details-1.jpg'
-import blogdetails2 from '../assets/img/blog-details-2.jpg'
-import blogdetails3 from '../assets/img/blog-details-3.jpg'
-import doublequote from '../assets/img/double-quotes.png'
-import johriislam from '../assets/img/Johari-lslam.jpg'
-import commnet1 from '../assets/img/comment-img-1.jpg'
-import commnet2 from '../assets/img/comment-img-2.jpg'
-import commnet3 from '../assets/img/comment-img-3.jpg'
-import bannrimg2 from '../assets/img/bannr-img-2.png'
-import bannrimg3 from '../assets/img/bannr-img-3.png'
-import bannrimg5 from '../assets/img/bannr-img-5.png'
-import bannrimg6 from '../assets/img/bannr-img-6.png'
 
 export const IMAGES = {
     logo: logo,
-    logo2: logo2,
-    buttonfooter: buttonfooter,
-    linefooter: linefooter,
-    instagram1: instagram1,
+                instagram1: instagram1,
     instagram2: instagram2,
     instagram3: instagram3,
     instagram4: instagram4,
     instagram5: instagram5,
     instagram6: instagram6,
 
-    footerbg: footerbg,
-    blogone4: blogone4,
+        blogone4: blogone4,
     blogone5: blogone5,
     blogone6: blogone6,
     bannerbg: bannerbg,
-    shapethree1: shapethree1,
-    shapethree2: shapethree2,
-    bannrshap: bannrshap,
-    shape1: shape1,
-    shape2: shape2,
-    shape3: shape3,
-    shape4: shape4,
-    shape5: shape5,
-    shape6: shape6,
-    shape7: shape7,
-    shape8: shape8,
-    shape9: shape9,
-    shape10: shape10,
-    bannrimag: bannrimag,
-    team1: team1,
-    team2: team2,
-    team3: team3,
-    heroimage: heroimage,
-    threeshapline: threeshapline,
-    bghero: bghero,
-    twoshap: twoshap,
-    circleimage2: circleimage2,
-    heroimg2: heroimg2,
-    about1: about1,
+                                                        bannrimag: bannrimag,
+                                        about1: about1,
     about2: about2,
     sign: sign,
     health1: health1,
     health2: health2,
     health3: health3,
-    chooseus: chooseus,
-    chooseuslogo: chooseuslogo,
-    circleimage: circleimage,
-    graph: graph,
+                graph: graph,
     pricingshap: pricingshap,
     pricingshap1: pricingshap1,
-    dotimage: dotimage,
-    brandlogo1: brandlogo1,
+        brandlogo1: brandlogo1,
     brandlogo2: brandlogo2,
     brandlogo3: brandlogo3,
     brandlogo4: brandlogo4,
@@ -197,12 +111,10 @@ export const IMAGES = {
     review: review,
     reviewimg2: reviewimg2,
     quotes: quotes,
-    abouttwo: abouttwo,
-    portfolio1: portfolio1,
+        portfolio1: portfolio1,
     portfolio2: portfolio2,
     portfolio3: portfolio3,
-    bgline2: bgline2,
-    appiontment: appiontment,
+        appiontment: appiontment,
     teamimg1: teamimg1,
     teamimg2: teamimg2,
     teamimg3: teamimg3,
@@ -213,35 +125,11 @@ export const IMAGES = {
     review1: review1,
     review2: review2,
     review3: review3,
-    quote2: quote2,
-    imageslider1: imageslider1,
-    imageslider2: imageslider2,
-    plus: plus,
-    aboutthree: aboutthree,
-    dentalproject1: dentalproject1,
+                plus: plus,
+        dentalproject1: dentalproject1,
     dentalproject2: dentalproject2,
     dentalproject3: dentalproject3,
-    workingprocess1: workingprocess1,
-    workingprocess2: workingprocess2,
-    workingprocessline: workingprocessline,
-    projectdetail1: projectdetail1,
-    projectdetail2: projectdetail2,
-    projectdetail3: projectdetail3,
-    projectdetail4: projectdetail4,
-    servicedetails: servicedetails,
-    blogdetails1: blogdetails1,
-    blogdetails2: blogdetails2,
-    blogdetails3: blogdetails3,
-    doublequote: doublequote,
-    johriislam: johriislam,
-    commnet1: commnet1,
-    commnet2: commnet2,
-    commnet3: commnet3,
-    bannrimg2: bannrimg2,
-    bannrimg3: bannrimg3,
-    bannrimg5: bannrimg5,
-    bannrimg6: bannrimg6
-}
+                                                                                }
 
 export const SVGICONS = {
     medical: <svg width="45" height="47" viewBox="0 0 45 47" fill="none" xmlns="http://www.w3.org/2000/svg">
