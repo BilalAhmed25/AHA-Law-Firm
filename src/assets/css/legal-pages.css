@@ -76,9 +76,17 @@
     color: #475569;
 }
 
+/* Ensure button icons inside .btn are always visible above pseudo-elements */
+.btn i,
+.btn span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s ease;
+}
+
 /* 404 Error Page Styling */
 .error-404-section {
-    padding: 100px 0;
+    padding: 140px 0 100px 0;
     background: #FAF8F5;
     min-height: 70vh;
     display: flex;

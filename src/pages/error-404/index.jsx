@@ -32,33 +32,17 @@ function NotFoundPage() {
                             {/* CTA Action Buttons */}
                             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'center' }}>
                                 <Link to="/" className="btn">
-                                    <i className="fa-solid fa-house" style={{ marginRight: '8px' }} />
+                                    <i className="fa-solid fa-house" />
                                     <span>Return to Home</span>
                                 </Link>
 
-                                <Link
-                                    to="/services"
-                                    className="btn"
-                                    style={{
-                                        background: 'transparent',
-                                        color: '#0A1628',
-                                        border: '2px solid #0A1628'
-                                    }}
-                                >
-                                    <i className="fa-solid fa-gavel" style={{ marginRight: '8px' }} />
+                                <Link to="/services" className="btn">
+                                    <i className="fa-solid fa-gavel" />
                                     <span>Practice Areas</span>
                                 </Link>
 
-                                <Link
-                                    to="/contact"
-                                    className="btn"
-                                    style={{
-                                        background: '#0A1628',
-                                        color: '#ffffff',
-                                        border: '2px solid #0A1628'
-                                    }}
-                                >
-                                    <i className="fa-solid fa-envelope" style={{ marginRight: '8px' }} />
+                                <Link to="/contact" className="btn">
+                                    <i className="fa-solid fa-envelope" />
                                     <span>Contact Advocates</span>
                                 </Link>
                             </div>
