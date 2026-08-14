@@ -9,7 +9,8 @@ import blogone4 from '../assets/img/blog-one-4.jpg';
 import blogone5 from '../assets/img/blog-one-5.jpg';
 import blogone6 from '../assets/img/blog-one-6.jpg';
 import bannerbg from '../assets/img/bannr-bg-img.png';
-import bannrimag from '../assets/img/hero-home.jpg';
+import bannrimag from '../assets/img/home-banner.gif';
+import homeBannerGif from '../assets/img/home-banner.gif';
 import about1 from '../assets/img/about-1.jpg';
 import about2 from '../assets/img/about-2.jpg';
 import sign from '../assets/img/signature.png';
@@ -64,28 +65,28 @@ import dentalproject3 from '../assets/img/dental-project-3.jpg'
 
 export const IMAGES = {
     logo: logo,
-                instagram1: instagram1,
+    instagram1: instagram1,
     instagram2: instagram2,
     instagram3: instagram3,
     instagram4: instagram4,
     instagram5: instagram5,
     instagram6: instagram6,
-
-        blogone4: blogone4,
+    blogone4: blogone4,
     blogone5: blogone5,
     blogone6: blogone6,
     bannerbg: bannerbg,
-                                                        bannrimag: bannrimag,
-                                        about1: about1,
+    bannrimag: bannrimag,
+    homeBannerGif: homeBannerGif,
+    about1: about1,
     about2: about2,
     sign: sign,
     health1: health1,
     health2: health2,
     health3: health3,
-                graph: graph,
+    graph: graph,
     pricingshap: pricingshap,
     pricingshap1: pricingshap1,
-        brandlogo1: brandlogo1,
+    brandlogo1: brandlogo1,
     brandlogo2: brandlogo2,
     brandlogo3: brandlogo3,
     brandlogo4: brandlogo4,
@@ -111,10 +112,10 @@ export const IMAGES = {
     review: review,
     reviewimg2: reviewimg2,
     quotes: quotes,
-        portfolio1: portfolio1,
+    portfolio1: portfolio1,
     portfolio2: portfolio2,
     portfolio3: portfolio3,
-        appiontment: appiontment,
+    appiontment: appiontment,
     teamimg1: teamimg1,
     teamimg2: teamimg2,
     teamimg3: teamimg3,
@@ -125,11 +126,11 @@ export const IMAGES = {
     review1: review1,
     review2: review2,
     review3: review3,
-                plus: plus,
-        dentalproject1: dentalproject1,
+    plus: plus,
+    dentalproject1: dentalproject1,
     dentalproject2: dentalproject2,
     dentalproject3: dentalproject3,
-                                                                                }
+}
 
 export const SVGICONS = {
     medical: <svg width="45" height="47" viewBox="0 0 45 47" fill="none" xmlns="http://www.w3.org/2000/svg">
