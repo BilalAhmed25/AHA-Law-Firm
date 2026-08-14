@@ -154,11 +154,12 @@
     font-size: 22px;
     font-weight: 800;
     color: #0A1628;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .quote-modal-form-subtitle {
     font-size: 13.5px;
+    line-height: 1.6;
     color: #64748B;
     margin-bottom: 24px;
 }
