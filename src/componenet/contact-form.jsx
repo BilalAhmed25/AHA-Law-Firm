@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import FloatingInput from "./floating-input";
 import PracticeDropdown from "./practice-dropdown";
+import emailjs from "@emailjs/browser";
+import { EMAILJS_CONFIG } from "../config/emailjs";
 import "../assets/css/contact-form.css";
 
 function ContactForm() {
@@ -26,22 +28,49 @@ function ContactForm() {
         e.preventDefault();
         setLoading(true);
 
-        // Simulate fast responsive processing
-        setTimeout(() => {
-            setLoading(false);
-            setStatus({
-                type: "success",
-                message: "Thank you for reaching out to AHA Law Firm! Your inquiry has been submitted. Our legal team will review your details and contact you shortly."
-            });
-            setFormData({
-                fullName: "",
-                email: "",
-                phone: "",
-                practiceArea: "",
-                subject: "",
-                message: ""
-            });
-        }, 800);
+        const templateParams = {
+            name: formData.fullName,
+            from_name: formData.fullName,
+            email: formData.email,
+            reply_to: formData.email,
+            phone: formData.phone,
+            service: formData.practiceArea || "General Legal Consultation",
+            title: formData.subject || "New Legal Inquiry",
+            subject: formData.subject || "New Legal Inquiry",
+            message: `Subject: ${formData.subject || "New Legal Inquiry"}\nEmail Address: ${formData.email}\nPhone / WhatsApp: ${formData.phone}\nPractice Area: ${formData.practiceArea || "General Legal Consultation"}\n\nCase Details:\n${formData.message}`,
+            time: new Date().toLocaleString("en-US", { timeZone: "Asia/Dubai" })
+        };
+
+        emailjs.send(
+            EMAILJS_CONFIG.SERVICE_ID,
+            EMAILJS_CONFIG.TEMPLATE_ID,
+            templateParams,
+            EMAILJS_CONFIG.PUBLIC_KEY
+        ).then(
+            () => {
+                setLoading(false);
+                setStatus({
+                    type: "success",
+                    message: "Thank you for reaching out to AHA Law Firm! Your inquiry has been submitted. Our legal team will review your details and contact you shortly."
+                });
+                setFormData({
+                    fullName: "",
+                    email: "",
+                    phone: "",
+                    practiceArea: "",
+                    subject: "",
+                    message: ""
+                });
+            },
+            (error) => {
+                console.error("EmailJS Error:", error);
+                setLoading(false);
+                setStatus({
+                    type: "error",
+                    message: "Unable to submit inquiry at this moment. Please try again or contact us directly at +971 56 685 6365."
+                });
+            }
+        );
     };
 
     return (

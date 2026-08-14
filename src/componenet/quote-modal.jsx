@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import FloatingInput from "./floating-input";
 import PracticeDropdown from "./practice-dropdown";
 import emailjs from "@emailjs/browser";
+import { EMAILJS_CONFIG } from "../config/emailjs";
 import "../assets/css/quote-modal.css";
 
 function QuoteModal() {
@@ -14,6 +15,7 @@ function QuoteModal() {
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
         const handleOpenModal = (event) => {
@@ -25,6 +27,7 @@ function QuoteModal() {
                 message: ""
             });
             setIsSubmitted(false);
+            setErrorMessage("");
             setIsOpen(true);
         };
 
@@ -44,28 +47,43 @@ function QuoteModal() {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+        if (errorMessage) setErrorMessage("");
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
+        setErrorMessage("");
 
         // Send consultation lead via EmailJS
         const templateParams = {
+            name: formData.fullName,
             from_name: formData.fullName,
+            email: formData.contactInfo,
             reply_to: formData.contactInfo,
+            contact_info: formData.contactInfo,
             service: formData.practiceArea || "General Legal Consultation",
-            message: formData.message || "Requesting legal quote & consultation."
+            title: `Legal Quote Request: ${formData.practiceArea || "General Consultation"}`,
+            subject: `Legal Quote Request: ${formData.practiceArea || "General Consultation"}`,
+            message: `Subject: Legal Quote Request (${formData.practiceArea || "General Consultation"})\nClient Contact / Email: ${formData.contactInfo}\nPractice Area: ${formData.practiceArea || "General Consultation"}\n\nInquiry Details:\n${formData.message || "Requesting legal consultation."}`,
+            time: new Date().toLocaleString("en-US", { timeZone: "Asia/Dubai" })
         };
 
-        emailjs.send("service_61hny88", "template_5f6jp4o", templateParams, "aYOgb_ORYkjD-hXhl")
+        emailjs.send(
+            EMAILJS_CONFIG.SERVICE_ID,
+            EMAILJS_CONFIG.TEMPLATE_ID,
+            templateParams,
+            EMAILJS_CONFIG.PUBLIC_KEY
+        )
             .then(() => {
                 setLoading(false);
                 setIsSubmitted(true);
             })
-            .catch(() => {
+            .catch((err) => {
+                console.error("EmailJS Error:", err);
                 setLoading(false);
-                setIsSubmitted(true);
+                const text = err?.text || err?.message || "Failed to send. Please check your EmailJS Public Key.";
+                setErrorMessage(text);
             });
     };
 
@@ -165,6 +183,21 @@ function QuoteModal() {
                             <p className="quote-modal-form-subtitle">
                                 Fill out the short form below to receive a legal assessment from our advocates.
                             </p>
+
+                            {errorMessage && (
+                                <div style={{
+                                    padding: "12px 16px",
+                                    borderRadius: "8px",
+                                    background: "#FEF2F2",
+                                    border: "1px solid #FECACA",
+                                    color: "#991B1B",
+                                    fontSize: "13.5px",
+                                    marginBottom: "16px"
+                                }}>
+                                    <i className="fa-solid fa-triangle-exclamation" style={{ marginRight: "8px" }} />
+                                    {errorMessage}
+                                </div>
+                            )}
 
                             <FloatingInput
                                 id="modal-fullName"

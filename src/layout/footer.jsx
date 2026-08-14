@@ -3,6 +3,7 @@ import { IMAGES } from "../constant/theme";
 import { footerdata } from "../constant/alldata";
 import SocialIcon from "../componenet/socialicon";
 import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from "../config/emailjs";
 import { useRef } from "react";
 
 function Footer() {
@@ -10,13 +11,17 @@ function Footer() {
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_61hny88', 'template_5f6jp4o', form.current, { publicKey: 'aYOgb_ORYkjD-hXhl', })
+        emailjs.sendForm(
+            EMAILJS_CONFIG.SERVICE_ID,
+            EMAILJS_CONFIG.TEMPLATE_ID,
+            form.current,
+            { publicKey: EMAILJS_CONFIG.PUBLIC_KEY }
+        )
             .then((result) => {
                 console.log('SUCCESS!', result.text);
             }, (error) => {
                 console.log('FAILED...', error.text);
-            },
-            );
+            });
         e.target.reset();
     };
     return (
