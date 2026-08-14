@@ -9,9 +9,8 @@ import blogone4 from '../assets/img/blog-one-4.jpg';
 import blogone5 from '../assets/img/blog-one-5.jpg';
 import blogone6 from '../assets/img/blog-one-6.jpg';
 import bannerbg from '../assets/img/bannr-bg-img.png';
-import bannrimag from '../assets/img/home-banner.gif';
-import homeBannerGif from '../assets/img/home-banner.gif';
 import mobileVideo from '../assets/img/mobile-video.mp4';
+import heroBannerVideo from '../assets/img/hero-banner.mp4';
 import about1 from '../assets/img/about-1.jpg';
 import about2 from '../assets/img/about-2.jpg';
 import sign from '../assets/img/signature.png';
@@ -79,6 +78,7 @@ export const IMAGES = {
     bannrimag: bannrimag,
     homeBannerGif: homeBannerGif,
     mobileVideo: mobileVideo,
+    heroBannerVideo: heroBannerVideo,
     about1: about1,
     about2: about2,
     sign: sign,

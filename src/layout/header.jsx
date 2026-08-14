@@ -34,9 +34,7 @@ function Header() {
         if (link !== '/' && location.pathname === link) return true;
         return false;
     };
-    const darkHeroPaths = ['/about', '/contact', '/services', '/services-details', '/our-blog', '/privacy-policy', '/terms-conditions'];
-    const isDarkHeroPage = darkHeroPaths.some(p => location.pathname === p || location.pathname.startsWith('/our-blog/'));
-    const isHeaderOnDark = isDarkHeroPage && !isSticky;
+    const isHeaderOnDark = !isSticky;
 
     return (
         <>
