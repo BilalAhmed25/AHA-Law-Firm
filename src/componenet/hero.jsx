@@ -69,7 +69,7 @@ function Hero() {
                 color: '#ffffff'
             }}
         >
-            {/* Full-Screen Video Background */}
+            {/* Full-Screen Video Background (Horizontally Flipped) */}
             <video
                 src={IMAGES.heroBannerVideo || IMAGES.mobileVideo}
                 autoPlay
@@ -83,6 +83,7 @@ function Hero() {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
+                    transform: 'scaleX(-1)',
                     zIndex: 0
                 }}
             />
@@ -105,8 +106,7 @@ function Hero() {
                 <div className="row align-items-center">
                     {/* Left Column: Hero Copy */}
                     <div className="col-lg-6 mb-5 mb-lg-0 text-start">
-                        <div style={{
-                            display: 'inline-flex',
+                        <div className="d-none d-md-inline-flex" style={{
                             alignItems: 'center',
                             gap: '8px',
                             background: 'rgba(197, 160, 89, 0.18)',
@@ -115,8 +115,8 @@ function Hero() {
                             borderRadius: '30px',
                             marginBottom: '24px'
                         }}>
-                            <i className="fa-solid fa-scale-balanced" style={{ color: 'var(--theme-colour)', fontSize: '13px' }} />
-                            <span style={{ color: 'var(--theme-colour)', fontSize: '13px', fontWeight: '600', letterSpacing: '0.8px', textTransform: 'uppercase' }}>
+                            <i className="fa-solid fa-scale-balanced" style={{ color: '#ffffff', fontSize: '13px' }} />
+                            <span style={{ color: '#ffffff', fontSize: '13px', fontWeight: '600', letterSpacing: '0.8px', textTransform: 'uppercase' }}>
                                 Top-Tier UAE Advocates & Legal Consultants
                             </span>
                         </div>

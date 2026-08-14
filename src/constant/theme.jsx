@@ -58,10 +58,6 @@ import blogtwo3 from '../assets/img/blog-two-3.jpg';
 import review1 from '../assets/img/review-1.jpg';
 import review2 from '../assets/img/review-2.jpg';
 import review3 from '../assets/img/review-3.jpg';
-import plus from '../assets/img/plus.png'
-import dentalproject1 from '../assets/img/dental-project-1.jpg'
-import dentalproject2 from '../assets/img/dental-project-2.jpg'
-import dentalproject3 from '../assets/img/dental-project-3.jpg'
 
 export const IMAGES = {
     logo: logo,
@@ -75,8 +71,6 @@ export const IMAGES = {
     blogone5: blogone5,
     blogone6: blogone6,
     bannerbg: bannerbg,
-    bannrimag: bannrimag,
-    homeBannerGif: homeBannerGif,
     mobileVideo: mobileVideo,
     heroBannerVideo: heroBannerVideo,
     about1: about1,
@@ -128,10 +122,6 @@ export const IMAGES = {
     review1: review1,
     review2: review2,
     review3: review3,
-    plus: plus,
-    dentalproject1: dentalproject1,
-    dentalproject2: dentalproject2,
-    dentalproject3: dentalproject3,
 }
 
 export const SVGICONS = {

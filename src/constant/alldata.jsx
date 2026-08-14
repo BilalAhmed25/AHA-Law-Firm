@@ -85,12 +85,7 @@ export const dentaldata = [
     { icon: SVGICONS.restorative, title: 'Contract Drafting', },
     { icon: SVGICONS.pediatric, title: 'Legal Compliance', },
 ]
-export const dentalswiper = [
-    { image: IMAGES.dentalproject1 },
-    { image: IMAGES.dentalproject2 },
-    { image: IMAGES.dentalproject3 },
-    { image: IMAGES.dentalproject1 },
-]
+
 export const workingdata = [
     { number: '01', title: 'Initial Consultation', },
     { number: '02', title: 'Strategic Planning', },
