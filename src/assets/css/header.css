@@ -209,6 +209,16 @@ header .logo {
     z-index: 1;
 }
 
+/* Make logo white in non-sticky header over dark hero background */
+header:not(.is-fixed) .logo img {
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+header.is-fixed .logo img {
+    filter: none;
+}
+
 header .header-search i {
     color: #fff;
     font-size: 20px;
