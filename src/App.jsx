@@ -1,5 +1,6 @@
 import Root from './route/route'
 import QuoteModal from './componenet/quote-modal'
+import ScrollToTop from './componenet/scroll-to-top'
 import "./assets/css/fontawesome.min.css"
 import './assets/css/bootstrap.min.css';
 import "./assets/css/style.css"
@@ -19,6 +20,7 @@ function App() {
     <>
       <Root />
       <QuoteModal />
+      <ScrollToTop />
     </>
   )
 }
