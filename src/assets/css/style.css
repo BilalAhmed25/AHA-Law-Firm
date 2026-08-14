@@ -887,10 +887,6 @@ span.flaticon-multiply i {
     height: 70px;
     width: 70px;
     background-position: center center;
-    background-repeat: no-repeat;
-    -webkit-animation: fa-spin 10s infinite linear;
-    animation: fa-spin 10s infinite linear;
-    background-image: url(../img/preloader.png);
     content: "";
 }
 
@@ -2604,7 +2600,7 @@ header.two {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: url(../img/graph-1.png);
+    background-image: url(../img/graph.png);
     z-index: 0;
 }
 

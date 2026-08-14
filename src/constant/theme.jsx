@@ -1,127 +1,19 @@
 import logo from '../assets/img/aha-law-firm-logo.png';
-import instagram1 from '../assets/img/instagram-1.jpg';
-import instagram2 from '../assets/img/instagram-2.jpg';
-import instagram3 from '../assets/img/instagram-3.jpg';
-import instagram4 from '../assets/img/instagram-4.jpg';
-import instagram5 from '../assets/img/instagram-5.jpg';
-import instagram6 from '../assets/img/instagram-6.jpg';
-import blogone4 from '../assets/img/blog-one-4.jpg';
-import blogone5 from '../assets/img/blog-one-5.jpg';
-import blogone6 from '../assets/img/blog-one-6.jpg';
 import bannerbg from '../assets/img/bannr-bg-img.png';
 import mobileVideo from '../assets/img/mobile-video.mp4';
 import heroBannerVideo from '../assets/img/hero-banner.mp4';
 import about1 from '../assets/img/about-1.jpg';
 import about2 from '../assets/img/about-2.jpg';
-import sign from '../assets/img/signature.png';
-import health1 from '../assets/img/health-img-1.png';
-import health2 from '../assets/img/health-img-2.png';
-import health3 from '../assets/img/health-img-3.png';
 import graph from '../assets/img/graph.png';
-import pricingshap from '../assets/img/pricing-plan-shap.png';
-import pricingshap1 from '../assets/img/pricing-plan-shap-1.png';
-import brandlogo1 from '../assets/img/brand-logo-1.png';
-import brandlogo2 from '../assets/img/brand-logo-2.png';
-import brandlogo3 from '../assets/img/brand-logo-3.png';
-import brandlogo4 from '../assets/img/brand-logo-4.png';
-import brandlogo5 from '../assets/img/brand-logo-5.png';
-import brandlogo6 from '../assets/img/brand-logo-6.png';
-import blogone1 from '../assets/img/blog-one-1.jpg';
-import blogone2 from '../assets/img/blog-one-2.jpg';
-import blogone3 from '../assets/img/blog-one-3.jpg';
-import project1 from '../assets/img/portfolio-1.jpg';
-import project2 from '../assets/img/portfolio-2.jpg';
-import project3 from '../assets/img/portfolio-3.jpg';
-import project4 from '../assets/img/portfolio-4.jpg';
-import project5 from '../assets/img/portfolio-5.jpg';
-import project6 from '../assets/img/portfolio-6.jpg';
-import project7 from '../assets/img/portfolio-7.jpg';
-import project8 from '../assets/img/portfolio-8.jpg';
-import project9 from '../assets/img/portfolio-9.jpg';
-import project10 from '../assets/img/portfolio-10.jpg';
-import project11 from '../assets/img/portfolio-11.jpg';
-import project12 from '../assets/img/portfolio-12.jpg';
-import review from '../assets/img/review-img-1.jpg';
-import reviewimg2 from '../assets/img/review-img-2.jpg';
-import quotes from '../assets/img/quotes.png';
-import portfolio1 from '../assets/img/portfolio-img-1.jpg';
-import portfolio2 from '../assets/img/portfolio-img-2.jpg';
-import portfolio3 from '../assets/img/portfolio-img-3.jpg';
-import appiontment from '../assets/img/appiontment.png';
-import teamimg1 from '../assets/img/team-img-1.jpg';
-import teamimg2 from '../assets/img/team-img-2.jpg';
-import teamimg3 from '../assets/img/team-img-3.jpg';
-import teamimg4 from '../assets/img/team-img-4.jpg';
-import blogtwo1 from '../assets/img/blog-two-1.jpg';
-import blogtwo2 from '../assets/img/blog-two-2.jpg';
-import blogtwo3 from '../assets/img/blog-two-3.jpg';
-import review1 from '../assets/img/review-1.jpg';
-import review2 from '../assets/img/review-2.jpg';
-import review3 from '../assets/img/review-3.jpg';
 
 export const IMAGES = {
     logo: logo,
-    instagram1: instagram1,
-    instagram2: instagram2,
-    instagram3: instagram3,
-    instagram4: instagram4,
-    instagram5: instagram5,
-    instagram6: instagram6,
-    blogone4: blogone4,
-    blogone5: blogone5,
-    blogone6: blogone6,
     bannerbg: bannerbg,
     mobileVideo: mobileVideo,
     heroBannerVideo: heroBannerVideo,
     about1: about1,
     about2: about2,
-    sign: sign,
-    health1: health1,
-    health2: health2,
-    health3: health3,
     graph: graph,
-    pricingshap: pricingshap,
-    pricingshap1: pricingshap1,
-    brandlogo1: brandlogo1,
-    brandlogo2: brandlogo2,
-    brandlogo3: brandlogo3,
-    brandlogo4: brandlogo4,
-    brandlogo5: brandlogo5,
-    brandlogo6: brandlogo6,
-    blogone1: blogone1,
-    blogone2: blogone2,
-    blogone3: blogone3,
-
-    project1: project1,
-    project2: project2,
-    project3: project3,
-    project4: project4,
-    project5: project5,
-    project6: project6,
-    project7: project7,
-    project8: project8,
-    project9: project9,
-    project10: project10,
-    project11: project11,
-    project12: project12,
-
-    review: review,
-    reviewimg2: reviewimg2,
-    quotes: quotes,
-    portfolio1: portfolio1,
-    portfolio2: portfolio2,
-    portfolio3: portfolio3,
-    appiontment: appiontment,
-    teamimg1: teamimg1,
-    teamimg2: teamimg2,
-    teamimg3: teamimg3,
-    teamimg4: teamimg4,
-    blogtwo1: blogtwo1,
-    blogtwo2: blogtwo2,
-    blogtwo3: blogtwo3,
-    review1: review1,
-    review2: review2,
-    review3: review3,
 }
 
 export const SVGICONS = {

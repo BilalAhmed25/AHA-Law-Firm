@@ -7,8 +7,8 @@ function ContactHero() {
         <section
             className="contact-banner"
             style={{
-                position: 'relative',
-                backgroundImage: `linear-gradient(135deg, rgba(10, 22, 40, 0.94) 0%, rgba(15, 32, 58, 0.90) 100%), url(${IMAGES.bannerbg})`,
+                backgroundColor: '#0A1628',
+                backgroundImage: `linear-gradient(135deg, rgba(10, 22, 40, 0.25) 0%, rgba(15, 32, 58, 0.15) 100%), url(${IMAGES.graph})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 paddingTop: '160px',
