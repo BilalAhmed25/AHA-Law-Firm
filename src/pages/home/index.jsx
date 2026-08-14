@@ -1,6 +1,7 @@
 import Header from "../../layout/header";
 import Footer from "../../layout/footer";
 import Hero from "../../componenet/hero";
+import HeroShowcase from "../../componenet/hero-showcase";
 import PracticeAreas from "../../componenet/practice-areas";
 import About from "../../componenet/about";
 import AboutTwo from "../../componenet/about-two";
@@ -18,6 +19,7 @@ function Index() {
             <Header />
             <Hero />
             <PracticeAreas />
+            <HeroShowcase />
             <OverviewCards />
             <About />
             <AboutTwo />

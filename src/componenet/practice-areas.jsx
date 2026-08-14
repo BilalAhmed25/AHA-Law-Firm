@@ -23,6 +23,86 @@ const practiceData = [
 function PracticeAreas() {
     return (
         <section className="gap" style={{ background: 'rgba(143, 99, 41, 0.04)', padding: '90px 0' }}>
+            <style>{`
+                .practice-flip-card {
+                    perspective: 1000px;
+                    height: 195px;
+                    margin-bottom: 24px;
+                    cursor: pointer;
+                }
+                .practice-flip-card-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    text-align: left;
+                    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                    transform-style: preserve-3d;
+                }
+                .practice-flip-card:hover .practice-flip-card-inner {
+                    transform: rotateY(180deg);
+                }
+                .practice-flip-card-front, .practice-flip-card-back {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    border-radius: 18px;
+                    box-sizing: border-box;
+                }
+                .practice-flip-card-front {
+                    background: #ffffff;
+                    padding: 24px 22px;
+                    border: 1px solid #e9e4da;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                .practice-flip-card-back {
+                    background: linear-gradient(135deg, #0A1628 0%, #152A4A 100%);
+                    border: 1px solid var(--theme-colour);
+                    box-shadow: 0 15px 35px rgba(10, 22, 40, 0.4);
+                    transform: rotateY(180deg);
+                    padding: 24px 22px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    color: #ffffff;
+                }
+                .practice-flip-card-back .watermark-icon {
+                    position: absolute;
+                    bottom: -15px;
+                    right: -15px;
+                    font-size: 85px;
+                    color: var(--theme-colour);
+                    opacity: 0.15;
+                    pointer-events: none;
+                    transform: rotate(-10deg);
+                    transition: all 0.5s ease;
+                }
+                .practice-flip-card:hover .practice-flip-card-back .watermark-icon {
+                    opacity: 0.22;
+                    transform: rotate(0deg) scale(1.05);
+                }
+                .practice-flip-card-back .cta-link {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: var(--theme-colour);
+                    font-weight: 600;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    transition: all 0.3s ease;
+                }
+                .practice-flip-card:hover .practice-flip-card-back .cta-link i {
+                    transform: translateX(4px);
+                }
+            `}</style>
             <div className="container">
                 <div className="row align-items-end" style={{ marginBottom: '45px' }}>
                     <div className="col-lg-8">
@@ -48,90 +128,64 @@ function PracticeAreas() {
                 </div>
                 <div className="row">
                     {practiceData.map((item, idx) => (
-                        <div className="col-lg-3 col-md-6" key={idx} style={{ marginBottom: '24px' }}>
+                        <div className="col-lg-3 col-md-6" key={idx}>
                             <div
+                                className="practice-flip-card"
                                 onClick={() => openQuoteModal(item.title)}
-                                style={{
-                                    background: '#ffffff',
-                                    borderRadius: '18px',
-                                    padding: '26px 24px',
-                                    border: '1px solid #e9e4da',
-                                    boxShadow: '0 4px 15px rgba(0,0,0,0.03)',
-                                    transition: 'all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1)',
-                                    cursor: 'pointer',
-                                    height: '100%',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    justifyContent: 'space-between',
-                                    position: 'relative',
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-6px)';
-                                    e.currentTarget.style.boxShadow = '0 15px 35px rgba(143, 99, 41, 0.15)';
-                                    e.currentTarget.style.borderColor = 'var(--theme-colour)';
-                                    const badge = e.currentTarget.querySelector('.arrow-badge');
-                                    if (badge) {
-                                        badge.style.background = 'var(--theme-colour)';
-                                        badge.style.color = '#ffffff';
-                                        badge.style.transform = 'rotate(45deg)';
-                                    }
-                                    const iconBox = e.currentTarget.querySelector('.icon-box');
-                                    if (iconBox) {
-                                        iconBox.style.color = 'var(--theme-colour)';
-                                        iconBox.style.transform = 'scale(1.1)';
-                                    }
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = '0 4px 15px rgba(0,0,0,0.03)';
-                                    e.currentTarget.style.borderColor = '#e9e4da';
-                                    const badge = e.currentTarget.querySelector('.arrow-badge');
-                                    if (badge) {
-                                        badge.style.background = 'rgba(143, 99, 41, 0.08)';
-                                        badge.style.color = 'var(--theme-colour)';
-                                        badge.style.transform = 'rotate(0deg)';
-                                    }
-                                    const iconBox = e.currentTarget.querySelector('.icon-box');
-                                    if (iconBox) {
-                                        iconBox.style.color = '#0A1628';
-                                        iconBox.style.transform = 'scale(1)';
-                                    }
-                                }}
                             >
-                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
-                                    <div className="icon-box" style={{
-                                        fontSize: '22px',
-                                        color: '#0A1628',
-                                        transition: 'all 0.3s ease',
-                                        width: '42px',
-                                        height: '42px',
-                                        borderRadius: '10px',
-                                        background: 'rgba(143, 99, 41, 0.08)',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
-                                    }}>
-                                        <i className={item.icon} />
-                                    </div>
-                                    <div className="arrow-badge" style={{
-                                        width: '36px',
-                                        height: '36px',
-                                        borderRadius: '50%',
-                                        background: 'rgba(143, 99, 41, 0.08)',
-                                        color: 'var(--theme-colour)',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontSize: '13px',
-                                        transition: 'all 0.3s ease',
-                                    }}>
-                                        <i className="fa-solid fa-arrow-up-right-from-square" />
-                                    </div>
-                                </div>
+                                <div className="practice-flip-card-inner">
+                                    {/* Front Side */}
+                                    <div className="practice-flip-card-front">
+                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+                                            <div className="icon-box" style={{
+                                                fontSize: '22px',
+                                                color: '#0A1628',
+                                                transition: 'all 0.3s ease',
+                                                width: '42px',
+                                                height: '42px',
+                                                borderRadius: '10px',
+                                                background: 'rgba(143, 99, 41, 0.08)',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center'
+                                            }}>
+                                                <i className={item.icon} />
+                                            </div>
+                                            <div className="arrow-badge" style={{
+                                                width: '36px',
+                                                height: '36px',
+                                                borderRadius: '50%',
+                                                background: 'rgba(143, 99, 41, 0.08)',
+                                                color: 'var(--theme-colour)',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                fontSize: '13px',
+                                                transition: 'all 0.3s ease',
+                                            }}>
+                                                <i className="fa-solid fa-arrow-up-right-from-square" />
+                                            </div>
+                                        </div>
 
-                                <div>
-                                    <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#0A1628', margin: '0 0 6px 0' }}>{item.title}</h5>
-                                    <p style={{ fontSize: '13px', lineHeight: '20px', color: '#777777', margin: 0 }}>{item.desc}</p>
+                                        <div>
+                                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#0A1628', margin: '0 0 6px 0' }}>{item.title}</h5>
+                                            <p style={{ fontSize: '13px', lineHeight: '20px', color: '#777777', margin: 0 }}>{item.desc}</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Back Side */}
+                                    <div className="practice-flip-card-back">
+                                        <i className={`${item.icon} watermark-icon`} />
+                                        <div>
+                                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#ffffff', margin: '0 0 6px 0' }}>{item.title}</h5>
+                                            <p style={{ fontSize: '12.5px', lineHeight: '18px', color: '#94A3B8', margin: 0 }}>{item.desc}</p>
+                                        </div>
+
+                                        <div className="cta-link">
+                                            <span>Contact for Consultation</span>
+                                            <i className="fa-solid fa-arrow-right" style={{ fontSize: '12px' }} />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

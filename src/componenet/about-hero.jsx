@@ -158,8 +158,8 @@ function AboutHero() {
                                     <i className="fa-solid fa-scale-balanced" />
                                 </div>
                                 <div>
-                                    <h4 style={{ color: '#ffffff', margin: 0, fontSize: '24px', fontWeight: '800' }}>98.5%</h4>
-                                    <span style={{ color: '#94A3B8', fontSize: '12px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Successful Litigation & Dispute Outcomes</span>
+                                    <h4 style={{ color: '#ffffff', margin: 0, fontSize: '28px', fontWeight: '800' }}>20+</h4>
+                                    <span style={{ color: '#94A3B8', fontSize: '13px', fontWeight: '500', lineHeight: '1.35', display: 'block' }}>Practice Areas Covered Across UAE</span>
                                 </div>
                             </div>
                         </div>
