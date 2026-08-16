@@ -16,7 +16,7 @@ function OfficeLocations() {
             type: "Litigation, Personal Status & Penal Advocacy Branch",
             address: "Al Rashidiya 1, Crown Tower, Suite 402, Ajman, United Arab Emirates",
             phone: "+971 56 685 6365",
-            email: "ajman@ahalawfirm.ae",
+            email: "info@ahalawfirmdxb.com",
             hours: "Monday - Saturday: 9:00 AM - 7:00 PM",
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.287893112853!2d55.4418!3d25.4052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f578788888888%3A0x8888888888888888!2sAjman%20UAE!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
         }

@@ -3,6 +3,7 @@ import Footer from "../../layout/footer";
 import ContactHero from "../../componenet/contact-hero";
 import OfficeLocations from "../../componenet/office-locations";
 import ContactForm from "../../componenet/contact-form";
+import GlobalPresenceMap from "../../componenet/global-presence-map";
 import Faq from "../../componenet/faq";
 
 function ContactPage() {
@@ -12,6 +13,7 @@ function ContactPage() {
             <ContactHero />
             <OfficeLocations />
             <ContactForm />
+            <GlobalPresenceMap />
             <Faq />
             <Footer />
         </>

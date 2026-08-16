@@ -10,6 +10,7 @@ import StatsCounter from "../../componenet/stats-counter";
 import Testimonials from "../../componenet/testimonials";
 import OverviewCards from "../../componenet/overview-cards";
 import FounderMessage from "../../componenet/founder-message";
+import GlobalPresenceMap from "../../componenet/global-presence-map";
 import Faq from "../../componenet/faq";
 import Cta from "../../componenet/cta";
 
@@ -28,6 +29,7 @@ function Index() {
             <AboutThree />
             <Cta />
             <FounderMessage />
+            <GlobalPresenceMap />
             <Faq />
             <Footer />
         </>

@@ -185,7 +185,7 @@ function ContactForm() {
                                             ) : (
                                                 <>
                                                     <i className="fa-solid fa-paper-plane" />
-                                                    <span>Submit Confidential Legal Inquiry</span>
+                                                    <span>Submit Legal Inquiry</span>
                                                 </>
                                             )}
                                         </button>
