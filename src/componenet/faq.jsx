@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/faq.css";
 
 const faqData = [
@@ -46,11 +47,16 @@ function Faq() {
                             <div className="faq-cta-card">
                                 <h3 className="faq-cta-title">Still have questions?</h3>
                                 <p className="faq-cta-text">
-                                    Can't find the answer to your question? Send us an email or message and our legal team will get back to you as soon as possible!
+                                    Can't find the answer to your question? Explore our comprehensive legal knowledge base or message our legal team directly.
                                 </p>
-                                <a href="mailto:info@ahalawfirmdxb.com" className="faq-cta-btn">
-                                    <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} /> Send Email
-                                </a>
+                                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                                    <Link to="/knowledge-base" className="faq-cta-btn" style={{ background: '#0A1628', color: '#ffffff' }}>
+                                        <i className="fa-solid fa-book-open" style={{ marginRight: '8px' }} /> Knowledge Base
+                                    </Link>
+                                    <a href="mailto:info@ahalawfirmdxb.com" className="faq-cta-btn" style={{ background: 'var(--theme-colour)', color: '#ffffff' }}>
+                                        <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} /> Send Email
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
