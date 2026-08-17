@@ -6,6 +6,7 @@ import InsightsPage from "../pages/insights";
 import InsightDetailsPage from "../pages/insights/details";
 import JudgementsPage from "../pages/judgements";
 import ServicesPage from "../pages/services";
+import TeamPage from "../pages/team";
 import PrivacyPolicyPage from "../pages/privacy-policy";
 import TermsConditionsPage from "../pages/terms-conditions";
 import NotFoundPage from "../pages/error-404";
@@ -13,6 +14,8 @@ import NotFoundPage from "../pages/error-404";
 const rootdata = [
     { path: "/", element: <Index /> },
     { path: "/about", element: <AboutPage /> },
+    { path: "/team", element: <TeamPage /> },
+    { path: "/our-team", element: <TeamPage /> },
     { path: "/contact", element: <ContactPage /> },
     { path: "/services", element: <ServicesPage /> },
     { path: "/services-details", element: <ServicesPage /> },

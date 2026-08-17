@@ -33,6 +33,7 @@ export const menudata = [
             { title: "Wills, Probate & Legacy Planning", link: "/services" },
         ],
     },
+    { title: "Our Team", link: "/team" },
     {
         title: "Blogs & Judgements",
         link: "#",
@@ -50,6 +51,7 @@ export const footerdata = [
         title: "Quick Links",
         links: [
             { title2: "About Us", url: "/about" },
+            { title2: "Our Team", url: "/team" },
             { title2: "Practice Areas", url: "/services" },
             { title2: "Blogs", url: "/our-blog" },
             { title2: "Contact Us", url: "/contact" },
