@@ -15,7 +15,14 @@ const navIcons = {
 
 function MobileSidebar({ show, setShow }) {
     const [mobilePracticeOpen, setMobilePracticeOpen] = useState(false);
-    const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState(false);
+    const [openSubMenus, setOpenSubMenus] = useState({});
+
+    const toggleSubMenu = (idx) => {
+        setOpenSubMenus(prev => ({
+            ...prev,
+            [idx]: !prev[idx]
+        }));
+    };
 
     return (
         <>
@@ -63,11 +70,37 @@ function MobileSidebar({ show, setShow }) {
                                                         borderTop: catIdx === 0 ? 'none' : '1px solid rgba(143, 99, 41, 0.16)'
                                                     }}
                                                 >
-                                                    <span style={{ fontSize: '12.5px', fontWeight: '700', color: 'var(--theme-colour)', textTransform: 'uppercase', letterSpacing: '1.2px', display: 'flex', alignItems: 'center', gap: '7px', marginBottom: '10px' }}>
-                                                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--theme-colour)', display: 'inline-block', flexShrink: 0 }} />
-                                                        <span>{cat.title}</span>
-                                                    </span>
-                                                    {cat.columns ? (
+                                                    {cat.title !== 'Practices' && (
+                                                        <span style={{ fontSize: '12.5px', fontWeight: '700', color: 'var(--theme-colour)', textTransform: 'uppercase', letterSpacing: '1.2px', display: 'flex', alignItems: 'center', gap: '7px', marginBottom: '10px' }}>
+                                                            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--theme-colour)', display: 'inline-block', flexShrink: 0 }} />
+                                                            <span>{cat.title}</span>
+                                                        </span>
+                                                    )}
+                                                    {cat.groups ? (
+                                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '6px' }}>
+                                                            {cat.groups.map((group, gIdx) => (
+                                                                <div key={gIdx} style={{ paddingLeft: '8px' }}>
+                                                                    <span style={{ fontSize: '12px', fontWeight: '700', color: '#0A1628', textTransform: 'uppercase', letterSpacing: '0.6px', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+                                                                        <i className={group.icon} style={{ fontSize: '11px', color: 'var(--theme-colour)' }} />
+                                                                        <span>{group.heading}</span>
+                                                                    </span>
+                                                                    <div style={{ paddingLeft: '14px', display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                                                                        {group.items.map((sub, subIdx) => (
+                                                                            <Link
+                                                                                key={subIdx}
+                                                                                to="/services"
+                                                                                onClick={() => setShow(false)}
+                                                                                style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '4px 0', color: '#475569', fontSize: '13px', fontWeight: '500', textDecoration: 'none' }}
+                                                                            >
+                                                                                <i className="fa-solid fa-angle-right" style={{ fontSize: '10px', color: 'var(--theme-colour)' }} />
+                                                                                <span>{sub.title}</span>
+                                                                            </Link>
+                                                                        ))}
+                                                                    </div>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    ) : cat.columns ? (
                                                         cat.columns.flat().map((sub, subIdx) => (
                                                             <Link
                                                                 key={subIdx}
@@ -100,21 +133,22 @@ function MobileSidebar({ show, setShow }) {
                             }
 
                             if (item.subMenu) {
+                                const isSubOpen = !!openSubMenus[i];
                                 return (
                                     <li key={i} style={{ borderBottom: '1px solid rgba(10, 22, 40, 0.06)', paddingBottom: '6px' }}>
                                         <div
                                             className="d-flex align-items-center justify-content-between"
-                                            onClick={() => setMobileSubMenuOpen(!mobileSubMenuOpen)}
+                                            onClick={() => toggleSubMenu(i)}
                                             style={{ cursor: 'pointer', padding: '10px 0', color: '#0A1628', fontWeight: '600', fontSize: '15px' }}
                                         >
                                             <span className="d-flex align-items-center gap-2">
                                                 <i className={iconClass} style={{ color: 'var(--theme-colour)', width: '20px' }} />
                                                 <span>{item.title}</span>
                                             </span>
-                                            <i className={`fa-solid ${mobileSubMenuOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`} style={{ fontSize: '12px', color: '#707070', transition: 'transform 0.3s ease' }} />
+                                            <i className={`fa-solid ${isSubOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`} style={{ fontSize: '12px', color: '#707070', transition: 'transform 0.3s ease' }} />
                                         </div>
 
-                                        <div className={`mobile-practice-accordion ${mobileSubMenuOpen ? 'open' : ''}`}>
+                                        <div className={`mobile-practice-accordion ${isSubOpen ? 'open' : ''}`}>
                                             <div style={{ paddingLeft: '28px', paddingTop: '6px' }}>
                                                 {item.subMenu.map((sub, subIdx) => (
                                                     <Link

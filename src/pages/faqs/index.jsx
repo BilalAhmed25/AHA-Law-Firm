@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { openQuoteModal } from "../../componenet/quote-modal";
 import { IMAGES } from "../../constant/theme";
 import Cta from "../../componenet/cta";
+import Testimonials from "../../componenet/testimonials";
+import FreeCaseReview from "../../componenet/free-case-review";
 
 const allFaqs = [
     {
@@ -383,6 +385,8 @@ function FaqsPage() {
             </section>
 
             <Cta />
+            <Testimonials />
+            <FreeCaseReview />
             <Footer />
         </>
     );

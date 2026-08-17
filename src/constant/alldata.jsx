@@ -2,7 +2,16 @@ import { IMAGES, SVGICONS } from "./theme";
 
 export const menudata = [
     { title: "Home", link: "/", },
-    { title: "About", link: "/about", },
+    {
+        title: "About Us",
+        link: "#",
+        classChange: "navbar-dropdown menu-item-children",
+        classChange2: "menu-item-has-children",
+        subMenu: [
+            { title: "About Us", link: "/about" },
+            { title: "Our Team", link: "/team" },
+        ],
+    },
     {
         title: "Practice Areas",
         link: "/services",
@@ -33,7 +42,6 @@ export const menudata = [
             { title: "Wills, Probate & Legacy Planning", link: "/services" },
         ],
     },
-    { title: "Our Team", link: "/team" },
     {
         title: "Blogs & Judgements",
         link: "#",
