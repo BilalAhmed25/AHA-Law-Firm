@@ -191,7 +191,7 @@ function InsightDetailsPage() {
                                         Written by {currentBlog.author}
                                     </h5>
                                     <p style={{ fontSize: '14px', color: '#64748B', margin: 0, lineHeight: '22px' }}>
-                                        AHA Law Firm provides full-service legal advice and advocacy across Dubai and Ajman. Our lawyers specialize in commercial, litigation, and regulatory advisory.
+                                        AHA Law Firm provides full service legal advice and advocacy across Dubai and Sharjah. Our lawyers specialize in commercial, litigation, and regulatory advisory.
                                     </p>
                                 </div>
                             </div>

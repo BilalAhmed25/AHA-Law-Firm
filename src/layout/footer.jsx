@@ -39,7 +39,7 @@ function Footer() {
                         <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
                             <div className="footre-logo">
                                 <Link to={"/"}><img src={IMAGES.logo} alt="AHA Law Firm" style={{ maxHeight: '60px', width: 'auto' }} /></Link>
-                                <p style={{ color: '#b0b0b0', fontSize: '15px', lineHeight: '26px', marginTop: '15px' }}>AHA Law Firm is a distinguished full-service legal practice headquartered in Dubai and Ajman, UAE. Committed to legal excellence, strategic insight, and unwavering dedication to client interests.</p>
+                                <p style={{ color: '#b0b0b0', fontSize: '15px', lineHeight: '26px', marginTop: '15px' }}>AHA Law Firm is a distinguished full service legal practice headquartered in UAE. Committed to legal excellence, strategic insight, and unwavering dedication to client interests.</p>
                                 <div style={{ marginTop: '20px' }}>
                                     <SocialIcon />
                                 </div>

@@ -71,13 +71,13 @@ function AboutHero() {
                             maxWidth: '620px',
                             fontWeight: '300'
                         }}>
-                            Founded on principles of absolute integrity, strategic foresight, and advocacy excellence, AHA Law Firm delivers trusted legal counsel to corporations, high-net-worth individuals, and international entities across Dubai, Ajman, and global jurisdictions.
+                            Founded on principles of absolute integrity, strategic foresight, and advocacy excellence, AHA Law Firm delivers trusted legal counsel to corporations, high-net-worth individuals, and international entities across Dubai, Sharjah, and global jurisdictions.
                         </p>
 
                         {/* Credential Badges */}
                         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '35px' }}>
                             {[
-                                "Dubai & Ajman Licensed",
+                                "UAE Licensed",
                                 "UAE Federal Court Rights",
                                 "DIFC & ADGM Tribunals",
                                 "International Legal Advisory"

@@ -4,6 +4,7 @@ import AboutPage from "../pages/about";
 import ContactPage from "../pages/contact";
 import InsightsPage from "../pages/insights";
 import InsightDetailsPage from "../pages/insights/details";
+import JudgementsPage from "../pages/judgements";
 import ServicesPage from "../pages/services";
 import PrivacyPolicyPage from "../pages/privacy-policy";
 import TermsConditionsPage from "../pages/terms-conditions";
@@ -16,8 +17,11 @@ const rootdata = [
     { path: "/services", element: <ServicesPage /> },
     { path: "/services-details", element: <ServicesPage /> },
     { path: "/our-blog", element: <InsightsPage /> },
+    { path: "/insights", element: <InsightsPage /> },
     { path: "/our-blog/:id", element: <InsightDetailsPage /> },
+    { path: "/insights/:id", element: <InsightDetailsPage /> },
     { path: "/our-blog-details", element: <InsightDetailsPage /> },
+    { path: "/judgements", element: <JudgementsPage /> },
     { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
     { path: "/terms-conditions", element: <TermsConditionsPage /> },
     { path: "/404", element: <NotFoundPage /> },

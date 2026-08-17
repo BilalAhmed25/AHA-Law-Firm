@@ -134,7 +134,7 @@ export const blogsData = [
         author: "Family & Legacy Advisory Lead",
         readTime: "6 min read",
         image: blogImg6,
-        excerpt: "Navigating non-Muslim personal status law, DIFC Will registrations, asset protection, and child custody regulations for expatriates in Dubai and Ajman.",
+        excerpt: "Navigating non-Muslim personal status law, DIFC Will registrations, asset protection, and child custody regulations for expatriates in Dubai and Sharjah.",
         content: [
             "Family law and estate planning in the UAE have experienced significant modernization. With the enactment of Federal Decree-Law No. 41 of 2022 on Civil Personal Status for Non-Muslims, expatriates enjoy personal autonomy in marriage, divorce, and inheritance matters.",
             "Registering a certified Will before the DIFC Wills Service Centre or Abu Dhabi Judicial Department ensures that an individual's assets and real estate are distributed precisely according to their wishes, overriding default Sharia inheritance distribution rules.",
@@ -222,7 +222,7 @@ export const blogsData = [
         author: "Maritime Law Division",
         readTime: "7 min read",
         image: blogImg10,
-        excerpt: "Legal representation in vessel arrest proceedings, charterparty breach claims, marine cargo damage, and maritime lien enforcement in Dubai and Ajman.",
+        excerpt: "Legal representation in vessel arrest proceedings, charterparty breach claims, marine cargo damage, and maritime lien enforcement in Dubai and Sharjah.",
         content: [
             "The UAE serves as a vital global maritime hub. Maritime law governs complex international shipping, cargo claims, vessel arrest applications, and port authority regulations.",
             "Under the UAE Maritime Code, creditors can seek precautionary vessel arrest orders to secure maritime debts, bunker claims, or crew wage disputes before local maritime courts.",

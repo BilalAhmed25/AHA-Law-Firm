@@ -13,6 +13,7 @@ import FounderMessage from "../../componenet/founder-message";
 import GlobalPresenceMap from "../../componenet/global-presence-map";
 import Faq from "../../componenet/faq";
 import Cta from "../../componenet/cta";
+import FreeCaseReview from "../../componenet/free-case-review";
 
 function Index() {
     return (
@@ -31,6 +32,7 @@ function Index() {
             <FounderMessage />
             <GlobalPresenceMap />
             <Faq />
+            <FreeCaseReview />
             <Footer />
         </>
     );

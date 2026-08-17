@@ -63,7 +63,7 @@ const practiceGroups = [
                 icon: "fa-solid fa-scale-balanced",
                 title: "Litigation & Dispute Resolution",
                 statute: "UAE Civil Procedure Law (Federal Law No. 42 of 2022)",
-                description: "Rigorous representation before Dubai, Ajman, and UAE Federal First Instance, Appeal, and Cassation Courts in commercial disputes.",
+                description: "Rigorous representation before Dubai, Sharjah, and UAE Federal First Instance, Appeal, and Cassation Courts in commercial disputes.",
                 bullets: [
                     "Rights of Audience Before All UAE Courts",
                     "Precautionary Asset Freezing & Attachment Orders",

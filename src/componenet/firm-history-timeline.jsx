@@ -5,7 +5,7 @@ function FirmHistoryTimeline() {
         {
             year: "2010",
             title: "Foundation & Primary UAE Licensure",
-            description: "Established primary operations in Ajman and Dubai, focusing on civil litigation, commercial contracts, and dispute advocacy before local UAE courts."
+            description: "Established primary operations in Sharjah and Dubai, focusing on civil litigation, commercial contracts, and dispute advocacy before local UAE courts."
         },
         {
             year: "2015",
@@ -19,7 +19,7 @@ function FirmHistoryTimeline() {
         },
         {
             year: "Present",
-            title: "Full-Service UAE Legal Powerhouse",
+            title: "full service UAE Legal Powerhouse",
             description: "Leading multi-disciplinary firm with over 1,500+ successful litigation outcomes, representing Fortune 500 companies, regional conglomerates, and private clients."
         }
     ];
@@ -54,7 +54,7 @@ function FirmHistoryTimeline() {
                             marginTop: '15px',
                             lineHeight: '26px'
                         }}>
-                            Over a decade of relentless legal advocacy, establishing legal precedents, and safeguarding client assets across Dubai and Ajman.
+                            Over a decade of relentless legal advocacy, establishing legal precedents, and safeguarding client assets across Dubai and Sharjah.
                         </p>
                     </div>
                 </div>

@@ -123,7 +123,7 @@ function QuoteModal() {
                         </h3>
 
                         <p className="quote-modal-left-subtitle">
-                            Request a confidential case evaluation with AHA Law Firm's senior advocates in Dubai & Ajman.
+                            Request a confidential case evaluation with AHA Law Firm's senior advocates in Dubai & Sharjah.
                         </p>
                     </div>
 

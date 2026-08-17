@@ -58,13 +58,13 @@ function ContactHero() {
                             maxWidth: '680px',
                             fontWeight: '300'
                         }}>
-                            Connect directly with our managing partners and senior legal advocates in Dubai and Ajman. Whether scheduling an in-person consultation or seeking emergency counsel, our firm guarantees rapid, discrete, and strategic assistance.
+                            Connect directly with our managing partners and senior legal advocates in Dubai and Sharjah. Whether scheduling an in-person consultation or seeking emergency counsel, our firm guarantees rapid, discrete, and strategic assistance.
                         </p>
 
                         {/* Status Badges */}
                         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                             {[
-                                { icon: "fa-location-dot", label: "Dubai & Ajman Offices" },
+                                { icon: "fa-location-dot", label: "Dubai & Sharjah Offices" },
                                 { icon: "fa-whatsapp", label: "24/7 Urgent Response" },
                                 { icon: "fa-clock", label: "Mon - Sat: 9:00 AM - 7:00 PM" }
                             ].map((item, idx) => (

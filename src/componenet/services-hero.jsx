@@ -27,7 +27,7 @@ function ServicesHero() {
                         </h1>
 
                         <p className="services-hero-subtitle">
-                            Full-spectrum legal representation, statutory advisory, and litigation advocacy before Dubai, Ajman, and UAE Federal Courts as well as DIFC & ADGM Common Law Tribunals.
+                            Full-spectrum legal representation, statutory advisory, and litigation advocacy before Dubai, Sharjah, and UAE Federal Courts as well as DIFC & ADGM Common Law Tribunals.
                         </p>
 
                         {/* Accreditation Badges */}

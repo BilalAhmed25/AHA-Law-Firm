@@ -30,7 +30,7 @@ function OverviewCards() {
                         </div>
                         <div className="col-lg-6">
                             <p className="overview-cards-subtext">
-                                AHA Law Firm is a premier full-service legal practice delivering strategic, yield-driven legal solutions that protect your commercial interests, assets, and reputation across the UAE.
+                                AHA Law Firm is a premier full service legal practice delivering strategic, yield-driven legal solutions that protect your commercial interests, assets, and reputation across the UAE.
                             </p>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ function OverviewCards() {
                                             Our licensed Emirati Advocates & Legal Consultants handle complex civil, commercial, criminal, and corporate litigation.
                                         </p>
                                         <ul className="card-back-list">
-                                            <li><i className="fa-solid fa-circle-check"></i> Federal & Local UAE Courts (Dubai, Abu Dhabi, Ajman)</li>
+                                            <li><i className="fa-solid fa-circle-check"></i> Federal & Local UAE Courts (Dubai, Abu Dhabi, Sharjah)</li>
                                             <li><i className="fa-solid fa-circle-check"></i> DIFC & ADGM Common Law Courts</li>
                                             <li><i className="fa-solid fa-circle-check"></i> DIAC, ICC & International Arbitration</li>
                                         </ul>

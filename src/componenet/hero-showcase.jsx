@@ -76,57 +76,37 @@ function HeroShowcase() {
                             marginBottom: '32px',
                             fontWeight: '300'
                         }}>
-                            AHA Law Firm combines localized judicial expertise in Dubai and Ajman with global legal standards. We represent corporate leaders, international investors, and private individuals in complex disputes, commercial transactions, and high-stakes courtroom representation.
+                            AHA Law Firm combines localized judicial expertise in Dubai and Sharjah with global legal standards. We represent corporate leaders, international investors, and private individuals in complex disputes, commercial transactions, and high-stakes courtroom representation.
                         </p>
 
-                        {/* Highlight Cards Grid */}
-                        <div className="row g-3 mb-4">
+                        {/* Credential & Court Jurisdiction Badges */}
+                        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '32px' }}>
                             {[
-                                {
-                                    icon: "fa-solid fa-building-columns",
-                                    title: "DIFC & ADGM Jurisdiction",
-                                    desc: "Expert representation in English common law courts & arbitration centers."
-                                },
-                                {
-                                    icon: "fa-solid fa-handshake",
-                                    title: "Corporate & Advisory",
-                                    desc: "Comprehensive counsel for business setups, contracts & asset protection."
-                                }
-                            ].map((item, index) => (
-                                <div key={index} className="col-12">
-                                    <div style={{
-                                        display: 'flex',
-                                        alignItems: 'flex-start',
-                                        gap: '16px',
-                                        background: 'rgba(255, 255, 255, 0.04)',
-                                        border: '1px solid rgba(255, 255, 255, 0.08)',
-                                        padding: '16px 20px',
-                                        borderRadius: '14px',
-                                        transition: 'all 0.3s ease'
-                                    }}>
-                                        <div style={{
-                                            width: '44px',
-                                            height: '44px',
-                                            borderRadius: '10px',
-                                            background: 'rgba(197, 160, 89, 0.15)',
-                                            color: 'var(--theme-colour)',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            fontSize: '18px',
-                                            flexShrink: 0
-                                        }}>
-                                            <i className={item.icon} />
-                                        </div>
-                                        <div>
-                                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#ffffff', margin: '0 0 4px 0' }}>
-                                                {item.title}
-                                            </h5>
-                                            <p style={{ fontSize: '13px', lineHeight: '20px', color: '#94A3B8', margin: 0 }}>
-                                                {item.desc}
-                                            </p>
-                                        </div>
-                                    </div>
+                                { name: "UAE Licensed", icon: "fa-solid fa-certificate" },
+                                { name: "UAE Fedral Courts", icon: "fa-solid fa-building-columns" },
+                                { name: "DIFC & ADGM Tribunals", icon: "fa-solid fa-scale-balanced" },
+                                { name: "DIAC Arbitration", icon: "fa-solid fa-gavel" },
+                                { name: "Labour / Mohre", icon: "fa-solid fa-briefcase" },
+                                { name: "Rera / DLD", icon: "fa-solid fa-building" },
+                                { name: "Personal Status Courts", icon: "fa-solid fa-user-shield" }
+                            ].map((item, idx) => (
+                                <div key={idx} style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    background: 'rgba(255, 255, 255, 0.05)',
+                                    backdropFilter: 'blur(10px)',
+                                    WebkitBackdropFilter: 'blur(10px)',
+                                    border: '1px solid rgba(197, 160, 89, 0.3)',
+                                    padding: '9px 16px',
+                                    borderRadius: '10px',
+                                    fontSize: '13.5px',
+                                    color: '#F8FAFC',
+                                    fontWeight: '600',
+                                    transition: 'all 0.3s ease'
+                                }}>
+                                    <i className={item.icon} style={{ color: 'var(--theme-colour)', fontSize: '14px' }} />
+                                    <span>{item.name}</span>
                                 </div>
                             ))}
                         </div>
@@ -226,7 +206,7 @@ function HeroShowcase() {
                                 <i className="fa-solid fa-certificate" style={{ color: 'var(--theme-colour)', fontSize: '20px' }} />
                                 <div>
                                     <h6 style={{ color: '#ffffff', fontSize: '13.5px', margin: 0, fontWeight: '700' }}>Licensed UAE Advocates</h6>
-                                    <span style={{ color: '#CBD5E1', fontSize: '11.5px', fontWeight: '500' }}>Dubai & Ajman Bar</span>
+                                    {/* <span style={{ color: '#CBD5E1', fontSize: '11.5px', fontWeight: '500' }}>Dubai & Sharjah Bar</span> */}
                                 </div>
                             </div>
 

@@ -76,7 +76,10 @@ function Header() {
                                                     <Link
                                                         to={item.link}
                                                         className={isPathActive(item.link) ? 'nav-active' : ''}
-                                                    >{item.title}</Link>
+                                                        style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+                                                    >
+                                                        {item.title} <i className="fa-solid fa-chevron-down" style={{ fontSize: '10px' }} />
+                                                    </Link>
                                                     {item.subMenu && (
                                                         <ul className="sub-menu">
                                                             {item.subMenu.map((subItem, subIndex) => (

@@ -33,7 +33,7 @@ function About() {
                                 {[
                                     "Deep expertise in UAE Federal and Local Laws",
                                     "Multilingual legal team serving diverse clientele",
-                                    "Proven track record across Dubai and Ajman courts",
+                                    "Proven track record across Dubai and Sharjah courts",
                                     "Tailored, practical, and results-focused solutions",
                                 ].map((item, idx) => (
                                     <div key={idx} style={{

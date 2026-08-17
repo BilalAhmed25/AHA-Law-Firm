@@ -14,8 +14,8 @@ header .navbar-links,
 /* Invisible padding bridge fills gap so cursor stays in hover zone */
 .mega-dropdown-container {
     position: static !important;
-    padding-bottom: 20px;
-    margin-bottom: -20px;
+    padding-bottom: 25px;
+    margin-bottom: -25px;
 }
 
 .mega-dropdown-menu {
@@ -23,29 +23,175 @@ header .navbar-links,
     opacity: 0;
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
+    left: 30px;
+    right: 30px;
+    width: calc(100% - 60px);
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.97) !important;
+    background: rgba(255, 255, 255, 0.98) !important;
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
     border-radius: 20px !important;
-    border: 1px solid rgba(143, 99, 41, 0.2) !important;
+    border: 1px solid rgba(143, 99, 41, 0.25) !important;
     box-shadow: 0 25px 65px rgba(10, 22, 40, 0.18) !important;
-    padding: 36px 40px;
+    padding: 34px 40px !important;
     z-index: 9999;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease 0.15s, transform 0.3s ease 0.15s, visibility 0.3s ease 0.15s;
     pointer-events: none;
-    transform: translateY(8px);
-    margin-top: 14px;
+    transform: translateY(6px);
+    margin-top: 2px;
 }
 
-.mega-dropdown-container:hover .mega-dropdown-menu {
+/* Pseudo element invisible top bridge so cursor movement never breaks hover */
+.mega-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: 35px;
+    background: transparent;
+    pointer-events: auto;
+}
+
+.mega-dropdown-container:hover .mega-dropdown-menu,
+.mega-dropdown-menu:hover {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+    transition-delay: 0s !important;
+}
+
+/* =========================================================
+   LEFT CATEGORY SIDEBAR TABS STYLING
+   ========================================================= */
+
+.mega-sidebar-heading {
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(143, 99, 41, 0.15);
+}
+
+.mega-category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mega-category-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #FAF8F5;
+    border: 1px solid rgba(143, 99, 41, 0.2);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mega-category-tab .mega-tab-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #0A1628;
+    transition: color 0.3s ease;
+}
+
+.mega-category-tab .mega-tab-content i {
+    color: var(--theme-colour);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mega-category-tab .mega-tab-badge i {
+    font-size: 11px;
+    color: #94A3B8;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Active & Hover Tab State (Luxurious Dark Navy Fill with Gold Accent) */
+.mega-category-tab:hover,
+.mega-category-tab.active {
+    background: linear-gradient(135deg, #0A1628 0%, #162a48 100%) !important;
+    border-color: var(--theme-colour) !important;
+    border-left: 4px solid var(--theme-colour) !important;
+    box-shadow: 0 10px 25px rgba(10, 22, 40, 0.2);
+    transform: translateX(4px);
+}
+
+.mega-category-tab:hover .mega-tab-content,
+.mega-category-tab.active .mega-tab-content {
+    color: #ffffff !important;
+}
+
+.mega-category-tab:hover .mega-tab-content i,
+.mega-category-tab.active .mega-tab-content i {
+    transform: scale(1.15);
+}
+
+.mega-category-tab:hover .mega-tab-badge i,
+.mega-category-tab.active .mega-tab-badge i {
+    color: var(--theme-colour) !important;
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   COMPACT PRACTICE PILL LINKS STYLING
+   ========================================================= */
+
+.mega-compact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8.5px 12px;
+    border-radius: 10px;
+    background: #FAF8F5;
+    border: 1px solid rgba(143, 99, 41, 0.16);
+    color: #0A1628;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 2px 6px rgba(10, 22, 40, 0.02);
+}
+
+.mega-compact-link i {
+    color: var(--theme-colour);
+    font-size: 13px;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.mega-compact-link span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mega-compact-link:hover {
+    background: #0A1628 !important;
+    border-color: var(--theme-colour) !important;
+    color: #ffffff !important;
+    transform: translateX(3px);
+    box-shadow: 0 6px 16px rgba(10, 22, 40, 0.15);
+}
+
+.mega-compact-link:hover i {
+    color: var(--theme-colour) !important;
+    transform: scale(1.2);
 }
 
 /* =========================================================
@@ -82,6 +228,7 @@ header .navbar-links,
     perspective: 1000px;
     height: 78px;
     margin-bottom: 9px;
+    position: relative;
 }
 
 .mega-flip-card-inner {
@@ -119,6 +266,7 @@ header .navbar-links,
     gap: 14px;
     z-index: 2;
     box-shadow: 0 2px 8px rgba(10, 22, 40, 0.03);
+    transform: rotateY(0deg);
 }
 
 .mega-flip-card-front .mega-item-icon {
@@ -168,20 +316,20 @@ header .navbar-links,
 }
 
 .mega-flip-title {
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.3;
-    margin: 0 0 4px 0;
+    margin: 0 0 3px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .mega-flip-desc {
-    font-size: 12px;
+    font-size: 11.5px;
     color: #b8c7d9;
-    line-height: 16.5px;
+    line-height: 16px;
     margin: 0;
     font-weight: 400;
     display: -webkit-box;
@@ -207,14 +355,6 @@ header .navbar-links,
 .mega-flip-card:hover .mega-flip-watermark-icon {
     opacity: 0.25;
     transform: scale(1.12) rotate(-6deg);
-}
-
-/* Column divider */
-.mega-col-divider {
-    width: 1px;
-    background: rgba(10, 22, 40, 0.08);
-    align-self: stretch;
-    margin: 0 4px;
 }
 
 /* ── CTA Card ── */
@@ -357,4 +497,99 @@ header .navbar-links,
 
 .mega-cta-btn:hover a {
     color: #ffffff !important;
+}
+
+/* =========================================================
+   GROUPED PRACTICES COLUMNS (PREMIUM LAYOUT)
+   ========================================================= */
+
+.mega-group-col {
+    padding: 0 8px;
+    border-right: none;
+}
+
+.mega-group-col:last-child {
+    border-right: none;
+}
+
+.mega-group-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid var(--theme-colour);
+}
+
+.mega-group-header i {
+    font-size: 12px;
+    color: var(--theme-colour);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: rgba(143, 99, 41, 0.1);
+    flex-shrink: 0;
+}
+
+.mega-group-header span {
+    font-family: "Poppins", sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #0A1628;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    line-height: 1.2;
+}
+
+.mega-group-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important;
+}
+
+.mega-group-links li {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.mega-group-link-item {
+    display: block;
+    font-size: 13.5px !important;
+    font-weight: 500;
+    color: #334155 !important;
+    line-height: 1.3 !important;
+    text-decoration: none !important;
+    padding: 3px 0 3px 18px !important;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.mega-group-link-item::before {
+    content: '›';
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-56%);
+    font-size: 15px;
+    font-weight: 700;
+    color: #94A3B8;
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.mega-group-link-item:hover {
+    color: var(--theme-colour) !important;
+    transform: translateX(3px);
+}
+
+.mega-group-link-item:hover::before {
+    color: var(--theme-colour) !important;
 }

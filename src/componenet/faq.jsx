@@ -4,15 +4,15 @@ import "../assets/css/faq.css";
 const faqData = [
     {
         question: "What types of legal matters does AHA Law Firm handle?",
-        answer: "AHA Law Firm is a full-service legal practice headquartered in Dubai and Ajman, UAE. We represent corporate entities, financial institutions, global investors, and individual clients across Litigation, Commercial Law, Real Estate, Criminal Defense, Family Law, Arbitration, Tax, and Intellectual Property."
+        answer: "AHA Law Firm is a full service legal practice headquartered in UAE. We represent corporate entities, financial institutions, global investors, and individual clients across Litigation, Commercial Law, Real Estate, Criminal Defense, Family Law, Arbitration, Tax, and Intellectual Property."
     },
     {
         question: "How do I schedule an initial consultation with your legal team?",
         answer: "You can schedule a consultation directly by calling us at +971 56 685 6365, emailing info@ahalawfirmdxb.com, or contacting us on WhatsApp. Our team will arrange a meeting with a specialized legal advisor at your convenience."
     },
     {
-        question: "Do you represent clients in both Dubai and Ajman courts?",
-        answer: "Yes, our advocacy team holds full rights of audience before all UAE Federal and Local Courts in Dubai, Ajman, Abu Dhabi, and across all Emirates, as well as international arbitration centers including DIAC and DIFC Courts."
+        question: "Do you represent clients in both Dubai and Sharjah courts?",
+        answer: "Yes, our advocacy team holds full rights of audience before all UAE Federal and Local Courts in Dubai, Sharjah, Abu Dhabi, and across all Emirates, as well as international arbitration centers including DIAC and DIFC Courts."
     },
     {
         question: "What are your fee structures and retainer options?",

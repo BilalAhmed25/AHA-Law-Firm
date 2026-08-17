@@ -19,7 +19,7 @@ function AboutTwo() {
                                 At AHA Law Firm, we combine rigorous UAE statutory legal analysis with agile dispute resolution strategies. Whether representing multinational corporations, financial institutions, or private individuals, our legal advocates deliver unmatched clarity, discretion, and high-stakes advocacy across every level of the legal system.
                             </p>
                             <p style={{ color: '#555555', fontSize: '16px', lineHeight: '28px', marginBottom: '0' }}>
-                                With full rights of audience before Dubai, Ajman, and UAE Federal Courts as well as DIFC and DIAC arbitration tribunals, we provide proactive legal defense, corporate structuring, and strategic advisory designed to secure your long-term success and safeguard your commercial interests.
+                                With full rights of audience before Dubai, Sharjah, and UAE Federal Courts as well as DIFC and DIAC arbitration tribunals, we provide proactive legal defense, corporate structuring, and strategic advisory designed to secure your long-term success and safeguard your commercial interests.
                             </p>
 
                             <div style={{ marginTop: '32px' }}>

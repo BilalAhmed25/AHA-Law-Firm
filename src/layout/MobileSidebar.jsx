@@ -9,12 +9,13 @@ const navIcons = {
     "Home": "fa-solid fa-house-chimney",
     "About": "fa-solid fa-building-columns",
     "Practice Areas": "fa-solid fa-gavel",
-    "Insights": "fa-solid fa-newspaper",
+    "Blogs & Judgements": "fa-solid fa-newspaper",
     "Contact": "fa-solid fa-envelope-open-text"
 };
 
 function MobileSidebar({ show, setShow }) {
     const [mobilePracticeOpen, setMobilePracticeOpen] = useState(false);
+    const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState(false);
 
     return (
         <>
@@ -64,21 +65,69 @@ function MobileSidebar({ show, setShow }) {
                                                 >
                                                     <span style={{ fontSize: '12.5px', fontWeight: '700', color: 'var(--theme-colour)', textTransform: 'uppercase', letterSpacing: '1.2px', display: 'flex', alignItems: 'center', gap: '7px', marginBottom: '10px' }}>
                                                         <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--theme-colour)', display: 'inline-block', flexShrink: 0 }} />
-                                                        <span>{cat.category}</span>
+                                                        <span>{cat.title}</span>
                                                     </span>
-                                                    {cat.items.map((sub, subIdx) => (
-                                                        <Link
-                                                            key={subIdx}
-                                                            to={sub.link}
-                                                            onClick={() => setShow(false)}
-                                                            style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '7px 0', color: '#3A4556', fontSize: '14.5px', fontWeight: '500', textDecoration: 'none' }}
-                                                        >
-                                                            <i className={sub.icon} style={{ fontSize: '14px', color: 'var(--theme-colour)', width: '18px' }} />
-                                                            <span>{sub.title}</span>
-                                                        </Link>
-                                                    ))}
+                                                    {cat.columns ? (
+                                                        cat.columns.flat().map((sub, subIdx) => (
+                                                            <Link
+                                                                key={subIdx}
+                                                                to="/services"
+                                                                onClick={() => setShow(false)}
+                                                                style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '7px 0', color: '#3A4556', fontSize: '14px', fontWeight: '500', textDecoration: 'none' }}
+                                                            >
+                                                                <i className="fa-solid fa-chevron-right" style={{ fontSize: '10px', color: 'var(--theme-colour)' }} />
+                                                                <span>{sub.title}</span>
+                                                            </Link>
+                                                        ))
+                                                    ) : (
+                                                        cat.items && cat.items.map((sub, subIdx) => (
+                                                            <Link
+                                                                key={subIdx}
+                                                                to={sub.link || "/services"}
+                                                                onClick={() => setShow(false)}
+                                                                style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '7px 0', color: '#3A4556', fontSize: '14px', fontWeight: '500', textDecoration: 'none' }}
+                                                            >
+                                                                <i className={sub.icon || "fa-solid fa-chevron-right"} style={{ fontSize: '12px', color: 'var(--theme-colour)' }} />
+                                                                <span>{sub.title}</span>
+                                                            </Link>
+                                                        ))
+                                                    )}
                                                 </div>
                                             ))}
+                                        </div>
+                                    </li>
+                                );
+                            }
+
+                            if (item.subMenu) {
+                                return (
+                                    <li key={i} style={{ borderBottom: '1px solid rgba(10, 22, 40, 0.06)', paddingBottom: '6px' }}>
+                                        <div
+                                            className="d-flex align-items-center justify-content-between"
+                                            onClick={() => setMobileSubMenuOpen(!mobileSubMenuOpen)}
+                                            style={{ cursor: 'pointer', padding: '10px 0', color: '#0A1628', fontWeight: '600', fontSize: '15px' }}
+                                        >
+                                            <span className="d-flex align-items-center gap-2">
+                                                <i className={iconClass} style={{ color: 'var(--theme-colour)', width: '20px' }} />
+                                                <span>{item.title}</span>
+                                            </span>
+                                            <i className={`fa-solid ${mobileSubMenuOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`} style={{ fontSize: '12px', color: '#707070', transition: 'transform 0.3s ease' }} />
+                                        </div>
+
+                                        <div className={`mobile-practice-accordion ${mobileSubMenuOpen ? 'open' : ''}`}>
+                                            <div style={{ paddingLeft: '28px', paddingTop: '6px' }}>
+                                                {item.subMenu.map((sub, subIdx) => (
+                                                    <Link
+                                                        key={subIdx}
+                                                        to={sub.link}
+                                                        onClick={() => setShow(false)}
+                                                        style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '8px 0', color: '#3A4556', fontSize: '14.5px', fontWeight: '500', textDecoration: 'none' }}
+                                                    >
+                                                        <i className="fa-solid fa-angle-right" style={{ fontSize: '12px', color: 'var(--theme-colour)' }} />
+                                                        <span>{sub.title}</span>
+                                                    </Link>
+                                                ))}
+                                            </div>
                                         </div>
                                     </li>
                                 );
