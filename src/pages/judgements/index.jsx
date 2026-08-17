@@ -314,14 +314,13 @@ function JudgementsPage() {
                                 </div>
                             ))
                         ) : (
-                            <div className="col-12 text-center py-4">
+                            <div className="col-12 text-center py-2">
                                 <div style={{
                                     background: '#FFFFFF',
                                     borderRadius: '24px',
                                     border: '1px solid #E2E8F0',
-                                    padding: '60px 30px',
-                                    maxWidth: '720px',
-                                    margin: '0 auto',
+                                    padding: '60px 40px',
+                                    width: '100%',
                                     boxShadow: '0 15px 35px rgba(10, 22, 40, 0.05)'
                                 }}>
                                     <div style={{
@@ -339,10 +338,10 @@ function JudgementsPage() {
                                     }}>
                                         <i className="fa-solid fa-gavel" />
                                     </div>
-                                    <h3 style={{ color: '#0A1628', fontSize: '26px', fontWeight: '800', marginBottom: '14px' }}>
+                                    <h3 style={{ color: '#0A1628', fontSize: '28px', fontWeight: '800', marginBottom: '14px' }}>
                                         Official Judgements Archive Updating
                                     </h3>
-                                    <p style={{ color: '#64748B', fontSize: '16px', lineHeight: '28px', marginBottom: '30px' }}>
+                                    <p style={{ color: '#64748B', fontSize: '16px', lineHeight: '28px', maxWidth: '750px', margin: '0 auto 30px auto' }}>
                                         We are currently updating our database with verified government court decisions and official reference links. Please check back shortly or consult our senior advocates directly.
                                     </p>
                                     <button

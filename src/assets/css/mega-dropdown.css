@@ -27,7 +27,7 @@ header .navbar-links,
     right: 30px;
     width: calc(100% - 60px);
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.98) !important;
+    background: #FAF6F0 !important;
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
     border-radius: 20px !important;

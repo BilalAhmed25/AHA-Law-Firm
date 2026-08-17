@@ -1,5 +1,5 @@
 import React from "react";
-import { openQuoteModal } from "./quote-modal";
+import { Link } from "react-router-dom";
 import "../assets/css/services-grid.css";
 
 const practiceGroups = [
@@ -11,6 +11,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-building-flag",
                 title: "Corporate & Commercial Law",
+                slug: "corporate-mergers-acquisitions",
                 statute: "UAE Federal Decree-Law No. 32 of 2021",
                 description: "Strategic corporate structuring, joint venture governance, UBO regulatory compliance, and cross-border commercial transactions.",
                 bullets: [
@@ -22,6 +23,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-file-contract",
                 title: "Contracts & Transactions",
+                slug: "commercial-law",
                 statute: "UAE Civil Code (Federal Law No. 5 of 1985)",
                 description: "Drafting, negotiating, and enforcing high-stakes commercial agreements, supply contracts, non-competes, and distribution terms.",
                 bullets: [
@@ -33,6 +35,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-calculator",
                 title: "Tax & Regulatory Compliance",
+                slug: "tax",
                 statute: "UAE Corporate Tax Decree-Law No. 47 of 2022",
                 description: "Navigating 9% Corporate Tax compliance, Federal Tax Authority (FTA) registrations, Economic Substance (ESR), and Transfer Pricing.",
                 bullets: [
@@ -44,6 +47,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-chart-line-down",
                 title: "Bankruptcy & Restructuring",
+                slug: "restructuring-insolvency",
                 statute: "UAE Bankruptcy Law (Decree-Law No. 51 of 2023)",
                 description: "Court-supervised insolvency restructuring, preventive composition procedures, asset protection, and debt settlement workouts.",
                 bullets: [
@@ -62,6 +66,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-scale-balanced",
                 title: "Litigation & Dispute Resolution",
+                slug: "litigation",
                 statute: "UAE Civil Procedure Law (Federal Law No. 42 of 2022)",
                 description: "Rigorous representation before Dubai, Sharjah, and UAE Federal First Instance, Appeal, and Cassation Courts in commercial disputes.",
                 bullets: [
@@ -73,6 +78,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-handshake-simple",
                 title: "Arbitration & ADR",
+                slug: "arbitration",
                 statute: "UAE Arbitration Law (Federal Law No. 6 of 2018)",
                 description: "Representation in international and domestic arbitration under DIAC, ICC, DIFC-LCIA, and ADGM arbitration tribunal rules.",
                 bullets: [
@@ -84,6 +90,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-ship",
                 title: "Maritime & Shipping Law",
+                slug: "shipping-logistics",
                 statute: "UAE Commercial Maritime Code",
                 description: "Specialized advocacy in vessel arrest applications, charterparty breach claims, marine insurance disputes, and port authority liens.",
                 bullets: [
@@ -102,6 +109,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-building-user",
                 title: "Real Estate & Property Law",
+                slug: "real-estate",
                 statute: "Dubai Land Department & RERA Regulations",
                 description: "Legal conveyancing, off-plan Sale & Purchase Agreement (SPA) review, escrow protection, and real estate dispute litigation.",
                 bullets: [
@@ -113,6 +121,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-vault",
                 title: "Banking & Financial Law",
+                slug: "banking-finance",
                 statute: "CBUAE Banking & Central Bank Directives",
                 description: "Legal representation in loan restructuring, commercial mortgage disputes, letter of credit (LC) claims, and CBUAE regulatory defense.",
                 bullets: [
@@ -124,6 +133,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-copyright",
                 title: "Intellectual Property",
+                slug: "intellectual-property",
                 statute: "UAE Trademark Law (Federal Law No. 36 of 2021)",
                 description: "Securing multi-jurisdictional trademark registrations, patent filings, trade secret non-disclosure agreements, and anti-counterfeiting.",
                 bullets: [
@@ -142,6 +152,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-user-ninja",
                 title: "Criminal Defense & Penal Law",
+                slug: "criminal-defense",
                 statute: "UAE Penal Code (Federal Decree-Law No. 31 of 2021)",
                 description: "Pre-trial interrogation defense, Public Prosecution advocacy, bail application filings, and criminal trial representation.",
                 bullets: [
@@ -153,6 +164,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-globe",
                 title: "Interpol & Extradition Defense",
+                slug: "interpol-extradition",
                 statute: "UAE International Judicial Cooperation Codes",
                 description: "Challenging international Interpol Red Notices before Lyon CCF and defending against cross-border extradition requests.",
                 bullets: [
@@ -164,6 +176,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-passport",
                 title: "Immigration & Golden Visa",
+                slug: "immigration-golden-visa",
                 statute: "Federal Authority for Identity & Citizenship (ICP)",
                 description: "Legal advisory for 10-year Golden Visa eligibility, real estate investor residency, specialized talent sponsorship, and appeals.",
                 bullets: [
@@ -175,6 +188,7 @@ const practiceGroups = [
             {
                 icon: "fa-solid fa-heart-pulse",
                 title: "Family & Personal Status Law",
+                slug: "family-personal-status",
                 statute: "Civil Personal Status Law (Decree-Law No. 41 of 2022)",
                 description: "Advocacy for non-Muslim civil divorce, child custody arrangements, alimony claims, and DIFC registered Will executions.",
                 bullets: [
@@ -256,15 +270,14 @@ function ServicesGrid() {
                                         </div>
 
                                         <div className="services-card-footer">
-                                            <button
-                                                type="button"
+                                            <Link
+                                                to={`/practice-areas/${practice.slug}`}
                                                 className="services-card-action"
-                                                style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
-                                                onClick={() => openQuoteModal(practice.title)}
+                                                style={{ textDecoration: 'none' }}
                                             >
-                                                <span>Consult Legal Advocate</span>
+                                                <span>Explore Practice & Counsel</span>
                                                 <i className="fa-solid fa-arrow-right" />
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

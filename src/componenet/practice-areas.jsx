@@ -1,43 +1,43 @@
 import React from "react";
-import { openQuoteModal } from "./quote-modal";
+import { Link } from "react-router-dom";
 
 const practiceData = [
-    { icon: "fa-solid fa-gavel", title: "Litigation & Disputes", desc: "Representation in UAE courts & tribunals" },
-    { icon: "fa-solid fa-scale-balanced", title: "Arbitration & ADR", desc: "DIAC & international arbitration proceedings" },
-    { icon: "fa-solid fa-building", title: "Corporate / M&A", desc: "M&A, joint ventures & corporate structuring" },
-    { icon: "fa-solid fa-chart-pie", title: "Capital Markets & PE", desc: "IPO advisory, private equity & capital markets" },
-    { icon: "fa-solid fa-file-contract", title: "Commercial Contracts", desc: "Drafting, negotiation & legal vetting" },
-    { icon: "fa-solid fa-landmark", title: "Banking & Financial Law", desc: "Banking regulations, fintech & financial disputes" },
-    { icon: "fa-solid fa-layer-group", title: "Competition & Antitrust", desc: "Fair trade compliance & merger clearance" },
-    { icon: "fa-solid fa-user-shield", title: "Compliance & Audits", desc: "Corporate investigations & anti-corruption" },
-    { icon: "fa-solid fa-helmet-safety", title: "Construction & Projects", desc: "FIDIC contracts, EPC projects & disputes" },
-    { icon: "fa-solid fa-briefcase", title: "Corporate Entity Services", desc: "Business setup, licensing & corporate secretarial" },
-    { icon: "fa-solid fa-sitemap", title: "Corporate Structuring", desc: "Holding structures, offshore setup & re-domiciliation" },
-    { icon: "fa-solid fa-microchip", title: "Digital & Data Privacy", desc: "Cybersecurity, AI regulation & UAE Data Law" },
-    { icon: "fa-solid fa-shield-halved", title: "Dispute Resolution", desc: "Strategic commercial & civil dispute defense" },
-    { icon: "fa-solid fa-handshake", title: "Employment & Labor", desc: "MOHRE compliance, labor disputes & contracts" },
-    { icon: "fa-solid fa-people-roof", title: "Family Business & Wealth", desc: "Succession planning, family office & wealth protection" },
-    { icon: "fa-solid fa-lightbulb", title: "Innovation & Patents (3IP)", desc: "Patent filings, industrial property & tech licensing" },
-    { icon: "fa-solid fa-shield-heart", title: "Insurance Law", desc: "Insurance coverage claims, policy drafting & disputes" },
-    { icon: "fa-solid fa-copyright", title: "Intellectual Property", desc: "Trademarks, copyright protection & enforcement" },
-    { icon: "fa-solid fa-globe", title: "International Litigation", desc: "Cross-border litigation & judgment enforcement" },
-    { icon: "fa-solid fa-scroll", title: "Legislative Drafting", desc: "Government policy drafting & regulatory frameworks" },
-    { icon: "fa-solid fa-handshake-angle", title: "Commercial Mediation", desc: "Pre-litigation mediation & settlement negotiations" },
-    { icon: "fa-solid fa-chart-line", title: "Private Equity Advisory", desc: "Investment structuring, fund formation & buyouts" },
-    { icon: "fa-solid fa-file-pen", title: "Private Notary Services", desc: "Document legalization, POA & notary services" },
-    { icon: "fa-solid fa-bolt", title: "Projects & Energy Law", desc: "Oil & gas, renewable energy & infrastructure" },
-    { icon: "fa-solid fa-house-chimney", title: "Real Estate & Property", desc: "RERA disputes, property sales, lease & conveyance" },
-    { icon: "fa-solid fa-stamp", title: "Regulatory Compliance", desc: "Regulatory approvals & statutory compliance" },
-    { icon: "fa-solid fa-ship", title: "Shipping & Logistics", desc: "Maritime claims, charter parties & logistics law" },
-    { icon: "fa-solid fa-leaf", title: "Sustainable Business (ESG)", desc: "ESG reporting, carbon credits & green compliance" },
-    { icon: "fa-solid fa-receipt", title: "Corporate Tax & VAT", desc: "UAE Corporate Tax, VAT advisory & audit defense" },
-    { icon: "fa-solid fa-vault", title: "Restructuring & Insolvency", desc: "Bankruptcy proceedings & debt restructuring" },
-    { icon: "fa-solid fa-rocket", title: "Venture Capital Advisory", desc: "Startup funding, term sheets & venture investments" },
-    { icon: "fa-solid fa-user-ninja", title: "Criminal Defense & Police", desc: "White collar defense, police bail & trial defense" },
-    { icon: "fa-solid fa-passport", title: "Interpol & Extradition", desc: "Red Notice removal & extradition defense" },
-    { icon: "fa-solid fa-plane-arrival", title: "Immigration & Golden Visa", desc: "UAE Golden Visa, investor visas & residency" },
-    { icon: "fa-solid fa-users", title: "Family & Personal Status", desc: "Custody, divorce & personal status court cases" },
-    { icon: "fa-solid fa-file-signature", title: "Wills & Legacy Planning", desc: "DIFC/ADGM wills, probate & estate inheritance" }
+    { icon: "fa-solid fa-gavel", title: "Litigation & Court Advocacy", slug: "litigation", desc: "Full rights of audience across all UAE Federal & Cassation Courts" },
+    { icon: "fa-solid fa-scale-balanced", title: "Arbitration & ADR", slug: "arbitration", desc: "DIAC, ICC & international arbitration proceedings" },
+    { icon: "fa-solid fa-building", title: "Corporate / M&A", slug: "corporate-mergers-acquisitions", desc: "M&A, joint ventures & corporate structuring" },
+    { icon: "fa-solid fa-chart-pie", title: "Capital Markets", slug: "capital-markets", desc: "IPO advisory, debt securities & Sukuk on DFM/ADX" },
+    { icon: "fa-solid fa-file-contract", title: "Commercial Contracts", slug: "commercial-law", desc: "Drafting, negotiation & commercial agency law" },
+    { icon: "fa-solid fa-landmark", title: "Banking & Financial Law", slug: "banking-finance", desc: "Banking regulations, fintech & financial disputes" },
+    { icon: "fa-solid fa-layer-group", title: "Competition & Antitrust", slug: "competition-antitrust", desc: "Fair trade compliance & mandatory merger clearance" },
+    { icon: "fa-solid fa-user-shield", title: "Compliance & Audits", slug: "compliance-investigations", desc: "Corporate investigations, AML & anti-corruption" },
+    { icon: "fa-solid fa-helmet-safety", title: "Construction & Projects", slug: "construction-infrastructure", desc: "FIDIC contracts, EPC megaprojects & delay claims" },
+    { icon: "fa-solid fa-briefcase", title: "Corporate Services", slug: "corporate-services", desc: "Mainland & Free Zone setup, secretarial & UBO" },
+    { icon: "fa-solid fa-sitemap", title: "Corporate Structuring", slug: "corporate-structuring", desc: "Holding structures, ADGM/DIFC SPVs & migration" },
+    { icon: "fa-solid fa-microchip", title: "Digital & Data Privacy", slug: "digital-data-privacy", desc: "Cybersecurity, AI regulation & UAE Data Law" },
+    { icon: "fa-solid fa-shield-halved", title: "Dispute Resolution", slug: "dispute-resolution", desc: "Strategic commercial & civil dispute defense" },
+    { icon: "fa-solid fa-handshake", title: "Employment & Labor", slug: "employment-labor", desc: "MOHRE compliance, executive contracts & non-competes" },
+    { icon: "fa-solid fa-people-roof", title: "Family Business & Wealth", slug: "family-business-wealth", desc: "Succession planning, family charters & wealth protection" },
+    { icon: "fa-solid fa-lightbulb", title: "Innovation & Patents (3IP)", slug: "patents-innovation", desc: "Patent filings, industrial property & tech licensing" },
+    { icon: "fa-solid fa-shield-heart", title: "Insurance Law", slug: "insurance", desc: "Insurance coverage claims, policy drafting & IDSC disputes" },
+    { icon: "fa-solid fa-copyright", title: "Intellectual Property", slug: "intellectual-property", desc: "Trademarks, customs border seizures & enforcement" },
+    { icon: "fa-solid fa-globe", title: "International Litigation", slug: "international-litigation", desc: "Cross-border litigation & foreign judgment enforcement" },
+    { icon: "fa-solid fa-scroll", title: "Legislative Drafting", slug: "legislative-drafting", desc: "Government policy drafting & regulatory frameworks" },
+    { icon: "fa-solid fa-handshake-angle", title: "Commercial Mediation", slug: "mediation", desc: "Binding mediation & amicable settlement negotiations" },
+    { icon: "fa-solid fa-chart-line", title: "Private Equity Advisory", slug: "private-equity", desc: "Fund formation, leveraged buyouts & growth capital" },
+    { icon: "fa-solid fa-file-pen", title: "Private Notary Services", slug: "private-notary", desc: "Document attestation, POA & remote digital notarization" },
+    { icon: "fa-solid fa-bolt", title: "Projects & Energy Law", slug: "projects-energy", desc: "Solar IPPs, oil & gas concessions & clean energy PPP" },
+    { icon: "fa-solid fa-house-chimney", title: "Real Estate & Property", slug: "real-estate", desc: "DLD conveyancing, off-plan disputes & RERA/RDC claims" },
+    { icon: "fa-solid fa-stamp", title: "Regulatory Compliance", slug: "regulatory-compliance", desc: "Government licensing approvals & statutory compliance" },
+    { icon: "fa-solid fa-ship", title: "Shipping & Logistics", slug: "shipping-logistics", desc: "Precautionary ship arrests, maritime claims & logistics" },
+    { icon: "fa-solid fa-leaf", title: "Sustainable Business (ESG)", slug: "sustainable-business-esg", desc: "ESG disclosures, carbon credits & green finance" },
+    { icon: "fa-solid fa-receipt", title: "Corporate Tax & VAT", slug: "tax", desc: "9% Corporate Tax, Qualifying Free Zone 0% & FTA audits" },
+    { icon: "fa-solid fa-vault", title: "Restructuring & Insolvency", slug: "restructuring-insolvency", desc: "Preventive composition, debt workouts & bankruptcy" },
+    { icon: "fa-solid fa-rocket", title: "Venture Capital Advisory", slug: "venture-capital", desc: "Startup funding rounds, SAFE notes & term sheets" },
+    { icon: "fa-solid fa-user-ninja", title: "Criminal Defense & Police", slug: "criminal-defense", desc: "24/7 emergency police bail & white-collar trial defense" },
+    { icon: "fa-solid fa-passport", title: "Interpol & Extradition", slug: "interpol-extradition", desc: "Red Notice removal in Lyon CCF & extradition defense" },
+    { icon: "fa-solid fa-plane-arrival", title: "Immigration & Golden Visa", slug: "immigration-golden-visa", desc: "10-Year Real Estate & Investor Golden Visa filing" },
+    { icon: "fa-solid fa-users", title: "Family & Personal Status", slug: "family-personal-status", desc: "Civil divorce, custody, alimony & personal status" },
+    { icon: "fa-solid fa-file-signature", title: "Wills & Legacy Planning", slug: "wills-probate", desc: "DIFC & Abu Dhabi civil wills, probate & inheritance" }
 ];
 
 function PracticeAreas() {
@@ -49,6 +49,8 @@ function PracticeAreas() {
                     height: 195px;
                     margin-bottom: 24px;
                     cursor: pointer;
+                    display: block;
+                    text-decoration: none !important;
                 }
                 .practice-flip-card-inner {
                     position: relative;
@@ -134,24 +136,22 @@ function PracticeAreas() {
                         </h2>
                     </div>
                     <div className="col-lg-4 text-lg-end" style={{ marginTop: '15px' }}>
-                        <a
-                            href="https://wa.me/971566856365?text=Hello%2C%20I%20would%20like%20to%20consult%20on%20legal%20services."
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link
+                            to="/services"
                             style={{ color: '#0A1628', fontWeight: '600', fontSize: '15px', textDecoration: 'none', borderBottom: '2px solid var(--theme-colour)', paddingBottom: '4px', transition: 'all 0.3s ease' }}
                             onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--theme-colour)'; }}
                             onMouseLeave={(e) => { e.currentTarget.style.color = '#0A1628'; }}
                         >
-                            View All Services <i className="fa-solid fa-arrow-right" style={{ marginLeft: '6px' }} />
-                        </a>
+                            View All Practice Groups <i className="fa-solid fa-arrow-right" style={{ marginLeft: '6px' }} />
+                        </Link>
                     </div>
                 </div>
                 <div className="row">
                     {practiceData.map((item, idx) => (
                         <div className="col-lg-3 col-md-6" key={idx}>
-                            <div
+                            <Link
+                                to={`/practice-areas/${item.slug}`}
                                 className="practice-flip-card"
-                                onClick={() => openQuoteModal(item.title)}
                             >
                                 <div className="practice-flip-card-inner">
                                     {/* Front Side */}
@@ -183,7 +183,7 @@ function PracticeAreas() {
                                                 fontSize: '13px',
                                                 transition: 'all 0.3s ease',
                                             }}>
-                                                <i className="fa-solid fa-arrow-up-right-from-square" />
+                                                <i className="fa-solid fa-arrow-right" />
                                             </div>
                                         </div>
 
@@ -202,12 +202,12 @@ function PracticeAreas() {
                                         </div>
 
                                         <div className="cta-link">
-                                            <span>Contact for Consultation</span>
+                                            <span>Explore Practice Area</span>
                                             <i className="fa-solid fa-arrow-right" style={{ fontSize: '12px' }} />
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>

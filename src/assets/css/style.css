@@ -144,7 +144,7 @@ Version:    1.0
 body,
 html {
     font-family: "Poppins";
-    overflow-x: hidden;
+    overflow-x: clip;
     background-color: #faf6f0;
 }
 

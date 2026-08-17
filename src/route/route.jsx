@@ -11,6 +11,7 @@ import FaqsPage from "../pages/faqs";
 import PrivacyPolicyPage from "../pages/privacy-policy";
 import TermsConditionsPage from "../pages/terms-conditions";
 import NotFoundPage from "../pages/error-404";
+import PracticeDetailPage from "../pages/practice-detail";
 
 const rootdata = [
     { path: "/", element: <Index /> },
@@ -23,6 +24,12 @@ const rootdata = [
     { path: "/contact", element: <ContactPage /> },
     { path: "/services", element: <ServicesPage /> },
     { path: "/services-details", element: <ServicesPage /> },
+    { path: "/practice-areas", element: <ServicesPage /> },
+    { path: "/practices", element: <ServicesPage /> },
+    { path: "/practice-areas/:slug", element: <PracticeDetailPage /> },
+    { path: "/practice-area/:slug", element: <PracticeDetailPage /> },
+    { path: "/practice/:slug", element: <PracticeDetailPage /> },
+    { path: "/services/:slug", element: <PracticeDetailPage /> },
     { path: "/our-blog", element: <InsightsPage /> },
     { path: "/insights", element: <InsightsPage /> },
     { path: "/our-blog/:id", element: <InsightDetailsPage /> },

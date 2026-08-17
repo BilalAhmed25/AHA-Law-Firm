@@ -88,7 +88,7 @@ function MobileSidebar({ show, setShow }) {
                                                                         {group.items.map((sub, subIdx) => (
                                                                             <Link
                                                                                 key={subIdx}
-                                                                                to="/services"
+                                                                                to={sub.slug ? `/practice-areas/${sub.slug}` : "/services"}
                                                                                 onClick={() => setShow(false)}
                                                                                 style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '4px 0', color: '#475569', fontSize: '13px', fontWeight: '500', textDecoration: 'none' }}
                                                                             >

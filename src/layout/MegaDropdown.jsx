@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { openQuoteModal } from "../componenet/quote-modal";
 import "../assets/css/mega-dropdown.css";
 
 export const megaNavigationData = [
@@ -14,60 +13,60 @@ export const megaNavigationData = [
                 heading: "Corporate & Transactional",
                 icon: "fa-solid fa-building",
                 items: [
-                    { title: "Corporate / Mergers & Acquisitions", modalQuery: "Corporate & M&A" },
-                    { title: "Capital Markets", modalQuery: "Capital Markets Advisory" },
-                    { title: "Private Equity", modalQuery: "Private Equity Advisory" },
-                    { title: "Venture Capital & Emerging Companies", modalQuery: "Venture Capital Advisory" },
-                    { title: "Corporate Services", modalQuery: "Corporate Services" },
-                    { title: "Corporate Structuring", modalQuery: "Corporate Structuring" },
-                    { title: "Banking & Finance", modalQuery: "Banking & Financial Law" },
-                    { title: "Insurance", modalQuery: "Insurance Law" },
-                    { title: "Tax", modalQuery: "Corporate Tax & VAT Advisory" }
+                    { title: "Corporate / Mergers & Acquisitions", slug: "corporate-mergers-acquisitions" },
+                    { title: "Capital Markets", slug: "capital-markets" },
+                    { title: "Private Equity", slug: "private-equity" },
+                    { title: "Venture Capital & Emerging Companies", slug: "venture-capital" },
+                    { title: "Corporate Services", slug: "corporate-services" },
+                    { title: "Corporate Structuring", slug: "corporate-structuring" },
+                    { title: "Banking & Finance", slug: "banking-finance" },
+                    { title: "Insurance Law", slug: "insurance" },
+                    { title: "Corporate Tax & VAT", slug: "tax" }
                 ]
             },
             {
                 heading: "Disputes & Resolution",
                 icon: "fa-solid fa-scale-balanced",
                 items: [
-                    { title: "Arbitration", modalQuery: "Arbitration & ADR" },
-                    { title: "Litigation", modalQuery: "Litigation & Court Advocacy" },
-                    { title: "Dispute Resolution", modalQuery: "Dispute Resolution" },
-                    { title: "International Litigation", modalQuery: "International Litigation" },
-                    { title: "Mediation", modalQuery: "Commercial Mediation" },
-                    { title: "Turnaround, Restructuring & Insolvency", modalQuery: "Restructuring & Insolvency" }
+                    { title: "Arbitration & ADR", slug: "arbitration" },
+                    { title: "Litigation & Court Advocacy", slug: "litigation" },
+                    { title: "Dispute Resolution", slug: "dispute-resolution" },
+                    { title: "International Litigation", slug: "international-litigation" },
+                    { title: "Commercial Mediation", slug: "mediation" },
+                    { title: "Turnaround & Insolvency", slug: "restructuring-insolvency" }
                 ]
             },
             {
                 heading: "Industry & Specialist",
                 icon: "fa-solid fa-briefcase",
                 items: [
-                    { title: "Commercial", modalQuery: "Commercial Law" },
-                    { title: "Construction & Infrastructure", modalQuery: "Construction & Infrastructure" },
-                    { title: "Real Estate", modalQuery: "Real Estate & Property Law" },
-                    { title: "Shipping, Aviation & Logistics", modalQuery: "Shipping & Logistics Law" },
-                    { title: "Projects", modalQuery: "Projects & Energy Law" },
-                    { title: "Employment & Incentives", modalQuery: "Employment & Labor Law" },
-                    { title: "Intellectual Property", modalQuery: "Intellectual Property" },
-                    { title: "Innovation, Patents & Industrial Property (3IP)", modalQuery: "Patents & Industrial Property" },
-                    { title: "Digital & Data", modalQuery: "Digital & Data Privacy" }
+                    { title: "Commercial Law & Contracts", slug: "commercial-law" },
+                    { title: "Construction & Infrastructure", slug: "construction-infrastructure" },
+                    { title: "Real Estate & Property", slug: "real-estate" },
+                    { title: "Shipping, Aviation & Logistics", slug: "shipping-logistics" },
+                    { title: "Projects & Energy Law", slug: "projects-energy" },
+                    { title: "Employment & Incentives", slug: "employment-labor" },
+                    { title: "Intellectual Property", slug: "intellectual-property" },
+                    { title: "Patents & Industrial Property (3IP)", slug: "patents-innovation" },
+                    { title: "Digital & Data Privacy", slug: "digital-data-privacy" }
                 ]
             },
             {
                 heading: "Regulatory & Advisory",
                 icon: "fa-solid fa-shield-halved",
                 items: [
-                    { title: "Competition", modalQuery: "Competition & Antitrust" },
-                    { title: "Compliance, Investigations & International Cooperation", modalQuery: "Compliance & Investigations" },
-                    { title: "Regulatory", modalQuery: "Regulatory Compliance" },
-                    { title: "Legislative Drafting", modalQuery: "Legislative Drafting & Policy" },
-                    { title: "Sustainable Business", modalQuery: "ESG & Sustainable Business" },
-                    { title: "Private Notary", modalQuery: "Private Notary Services" },
-                    { title: "Family Business & Private Client", modalQuery: "Family Business & Private Wealth" },
-                    { title: "Criminal Defense & Police Matters", modalQuery: "Criminal Defense" },
-                    { title: "Interpol Red Notice & Extradition Defense", modalQuery: "Interpol Red Notice Defense" },
-                    { title: "Immigration & Golden Visa Solutions", modalQuery: "Immigration & Golden Visa" },
-                    { title: "Family & Personal Status Law", modalQuery: "Family & Personal Status" },
-                    { title: "Wills, Probate & Legacy Planning", modalQuery: "Wills & Legacy Planning" }
+                    { title: "Competition & Antitrust", slug: "competition-antitrust" },
+                    { title: "Compliance & Investigations", slug: "compliance-investigations" },
+                    { title: "Regulatory Compliance", slug: "regulatory-compliance" },
+                    { title: "Legislative Drafting & Policy", slug: "legislative-drafting" },
+                    { title: "Sustainable Business (ESG)", slug: "sustainable-business-esg" },
+                    { title: "Private Notary Services", slug: "private-notary" },
+                    { title: "Family Business & Wealth", slug: "family-business-wealth" },
+                    { title: "Criminal Defense & Police Matters", slug: "criminal-defense" },
+                    { title: "Interpol & Extradition Defense", slug: "interpol-extradition" },
+                    { title: "Immigration & Golden Visa", slug: "immigration-golden-visa" },
+                    { title: "Family & Personal Status", slug: "family-personal-status" },
+                    { title: "Wills, Probate & Legacy", slug: "wills-probate" }
                 ]
             }
         ]
@@ -78,16 +77,16 @@ export const megaNavigationData = [
         type: "flip-cards",
         icon: "fa-solid fa-industry",
         items: [
-            { icon: "fa-solid fa-jet-fighter", title: "Defence & Aerospace", desc: "Government procurement & defense contracts.", link: "/services" },
-            { icon: "fa-solid fa-graduation-cap", title: "Education Sector", desc: "School & university regulatory compliance.", link: "/services" },
-            { icon: "fa-solid fa-solar-panel", title: "Energy & Resources", desc: "Oil, gas, solar & mining legal advisory.", link: "/services" },
-            { icon: "fa-solid fa-piggy-bank", title: "Financial Services", desc: "Banks, fintechs & investment funds advisory.", link: "/services" },
-            { icon: "fa-solid fa-user-doctor", title: "Healthcare & Life Sciences", desc: "Pharma, medical devices & hospital advisory.", link: "/services" },
-            { icon: "fa-solid fa-hotel", title: "Hotels & Leisure", desc: "Hospitality agreements & resort management.", link: "/services" },
-            { icon: "fa-solid fa-city", title: "Real Estate & Construction", desc: "Master developments & mega infrastructure.", link: "/services" },
-            { icon: "fa-solid fa-cart-shopping", title: "Retail & Consumer", desc: "Franchising, e-commerce & consumer rights.", link: "/services" },
-            { icon: "fa-solid fa-trophy", title: "Entertainment & Sports", desc: "Sponsorships, media rights & sports law.", link: "/services" },
-            { icon: "fa-solid fa-tower-cell", title: "TMT & Telecom", desc: "Telecom licensing, cloud & media regulation.", link: "/services" }
+            { icon: "fa-solid fa-jet-fighter", title: "Defence & Aerospace", desc: "Government procurement & defense contracts.", link: "/practice-areas/commercial-law" },
+            { icon: "fa-solid fa-graduation-cap", title: "Education Sector", desc: "School & university regulatory compliance.", link: "/practice-areas/regulatory-compliance" },
+            { icon: "fa-solid fa-solar-panel", title: "Energy & Resources", desc: "Oil, gas, solar & mining legal advisory.", link: "/practice-areas/projects-energy" },
+            { icon: "fa-solid fa-piggy-bank", title: "Financial Services", desc: "Banks, fintechs & investment funds advisory.", link: "/practice-areas/banking-finance" },
+            { icon: "fa-solid fa-user-doctor", title: "Healthcare & Life Sciences", desc: "Pharma, medical devices & hospital advisory.", link: "/practice-areas/regulatory-compliance" },
+            { icon: "fa-solid fa-hotel", title: "Hotels & Leisure", desc: "Hospitality agreements & resort management.", link: "/practice-areas/commercial-law" },
+            { icon: "fa-solid fa-city", title: "Real Estate & Construction", desc: "Master developments & mega infrastructure.", link: "/practice-areas/real-estate" },
+            { icon: "fa-solid fa-cart-shopping", title: "Retail & Consumer", desc: "Franchising, e-commerce & consumer rights.", link: "/practice-areas/commercial-law" },
+            { icon: "fa-solid fa-trophy", title: "Entertainment & Sports", desc: "Sponsorships, media rights & sports law.", link: "/practice-areas/intellectual-property" },
+            { icon: "fa-solid fa-tower-cell", title: "TMT & Telecom", desc: "Telecom licensing, cloud & media regulation.", link: "/practice-areas/digital-data-privacy" }
         ]
     },
     {
@@ -96,12 +95,12 @@ export const megaNavigationData = [
         type: "flip-cards",
         icon: "fa-solid fa-handshake-angle",
         items: [
-            { icon: "fa-solid fa-file-circle-check", title: "Free Case Review", desc: "100% confidential & zero-obligation evaluation.", link: "/services" },
-            { icon: "fa-solid fa-lock", title: "Emergency Asset Freezing", desc: "Ex-parte bank account freezing & injunctions.", link: "/services" },
-            { icon: "fa-solid fa-user-tie", title: "Corporate Retainer", desc: "Dedicated general counsel & legal department.", link: "/services" },
-            { icon: "fa-solid fa-building-columns", title: "Supreme Court Appeals", desc: "Senior Emirati advocates before Supreme Court.", link: "/services" },
-            { icon: "fa-solid fa-scale-balanced", title: "Arbitration Defense", desc: "DIAC, ICC & LCIA arbitration representation.", link: "/services" },
-            { icon: "fa-solid fa-passport", title: "Interpol Notice Defense", desc: "Defense against international arrest warrants.", link: "/services" }
+            { icon: "fa-solid fa-file-circle-check", title: "Free Case Review", desc: "100% confidential & zero-obligation evaluation.", link: "/contact" },
+            { icon: "fa-solid fa-lock", title: "Emergency Asset Freezing", desc: "Ex-parte bank account freezing & injunctions.", link: "/practice-areas/litigation" },
+            { icon: "fa-solid fa-user-tie", title: "Corporate Retainer", desc: "Dedicated general counsel & legal department.", link: "/practice-areas/corporate-services" },
+            { icon: "fa-solid fa-building-columns", title: "Supreme Court Appeals", desc: "Senior Emirati advocates before Supreme Court.", link: "/practice-areas/litigation" },
+            { icon: "fa-solid fa-scale-balanced", title: "Arbitration Defense", desc: "DIAC, ICC & LCIA arbitration representation.", link: "/practice-areas/arbitration" },
+            { icon: "fa-solid fa-passport", title: "Interpol Notice Defense", desc: "Defense against international arrest warrants.", link: "/practice-areas/interpol-extradition" }
         ]
     }
 ];
@@ -143,7 +142,7 @@ function MegaDropdown() {
                 {/* Right Content Panel */}
                 <div className="col-lg-9 col-md-9 mega-content-col">
 
-                    {/* ── PRACTICES: Grouped 4-Column Layout with Category Headers ── */}
+                    {/* ── PRACTICES: Grouped 4-Column Layout with Direct Page Links ── */}
                     {activeTab.type === "grouped-links" ? (
                         <div className="row g-4">
                             {activeTab.groups.map((group, gIdx) => (
@@ -155,16 +154,12 @@ function MegaDropdown() {
                                     <ul className="mega-group-links">
                                         {group.items.map((item, itemIdx) => (
                                             <li key={itemIdx}>
-                                                <a
-                                                    href="#consultation"
-                                                    onClick={(e) => {
-                                                        e.preventDefault();
-                                                        openQuoteModal(item.modalQuery || item.title);
-                                                    }}
+                                                <Link
+                                                    to={`/practice-areas/${item.slug}`}
                                                     className="mega-group-link-item"
                                                 >
                                                     {item.title}
-                                                </a>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
@@ -172,33 +167,34 @@ function MegaDropdown() {
                             ))}
                         </div>
                     ) : (
-                        /* ── SECTORS & CLIENT SOLUTIONS: 3D Flip Cards + CTA ── */
+                        /* ── SECTORS & CLIENT SOLUTIONS: 3D Flip Cards with Direct Navigation ── */
                         <div className="row g-3 align-items-stretch">
                             <div className="col-lg-8">
                                 <div className="row g-3">
                                     {activeTab.items.map((sub, subIdx) => (
                                         <div className="col-lg-6" key={subIdx}>
-                                            <div className="mega-flip-card">
-                                                <div className="mega-flip-card-inner">
-                                                    <div className="mega-flip-card-front">
-                                                        <div className="mega-item-icon">
-                                                            <i className={sub.icon} />
+                                            <Link
+                                                to={sub.link || "/services"}
+                                                style={{ textDecoration: 'none', display: 'block' }}
+                                            >
+                                                <div className="mega-flip-card">
+                                                    <div className="mega-flip-card-inner">
+                                                        <div className="mega-flip-card-front">
+                                                            <div className="mega-item-icon">
+                                                                <i className={sub.icon} />
+                                                            </div>
+                                                            <span className="mega-item-title">{sub.title}</span>
                                                         </div>
-                                                        <span className="mega-item-title">{sub.title}</span>
-                                                    </div>
-                                                    <div
-                                                        className="mega-flip-card-back"
-                                                        style={{ cursor: 'pointer' }}
-                                                        onClick={() => openQuoteModal(sub.title)}
-                                                    >
-                                                        <div className="mega-flip-back-content">
-                                                            <h6 className="mega-flip-title">{sub.title}</h6>
-                                                            <p className="mega-flip-desc">{sub.desc}</p>
+                                                        <div className="mega-flip-card-back">
+                                                            <div className="mega-flip-back-content">
+                                                                <h6 className="mega-flip-title">{sub.title}</h6>
+                                                                <p className="mega-flip-desc">{sub.desc}</p>
+                                                            </div>
+                                                            <i className={`${sub.icon} mega-flip-watermark-icon`} />
                                                         </div>
-                                                        <i className={`${sub.icon} mega-flip-watermark-icon`} />
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </div>
                                     ))}
                                 </div>
